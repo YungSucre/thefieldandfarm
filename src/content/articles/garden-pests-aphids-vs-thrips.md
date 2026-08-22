@@ -86,3 +86,9 @@ A: Yes, a garlic spray can repel both pests, but it is not as effective as comme
 Aphids and thrips are common but manageable. Identify them correctly by appearance and damage, then use cultural and physical controls first. Save chemical sprays for severe infestations. Regular monitoring and encouraging beneficial insects will keep both pests at bay. With these steps, you can protect your garden without resorting to harsh chemicals.
 
 Remember, the best control is prevention: healthy plants, clean garden beds, and early action. You've got this.
+
+
+## Related guides
+
+- [Aphids vs scale](/guides/garden-pests/aphids-vs-scale/)
+- [Aphids vs spider mites](/guides/garden-pests/aphids-vs-spider-mites/)

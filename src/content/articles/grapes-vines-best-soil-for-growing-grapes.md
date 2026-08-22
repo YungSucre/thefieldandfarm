@@ -110,3 +110,9 @@ Add organic matter like compost to increase water and nutrient retention. Use mu
 ## The Bottom Line
 
 The best soil for grapes is well-drained, sandy loam with a pH between 5.5 and 6.5. Test your soil before planting, amend it based on the results, and choose varieties suited to your conditions. Even if your soil is not perfect, you can still grow healthy vines with proper drainage and careful management. Start with a soil test this week, and you will be on your way to a productive vineyard.
+
+
+## Related guides
+
+- [Best soil ph for growing grapes](/guides/grapes-vines/best-soil-ph-for-growing-grapes/)
+- [Best way to eat grapes](/guides/grapes-vines/best-way-to-eat-grapes/)

@@ -71,3 +71,9 @@ That is quite acidic. You will need to add a significant amount of lime. For exa
 ## The Bottom Line
 
 The best soil pH for grapes is 6.0 to 6.5. Test your soil now, adjust with lime or sulfur if needed, and choose varieties that match your conditions. Maintaining the right pH is a long-term commitment, but it pays off with healthier vines and better fruit. Start with a soil test this week, and you will be on your way to a successful vineyard.
+
+
+## Related guides
+
+- [Best soil for growing grapes](/guides/grapes-vines/best-soil-for-growing-grapes/)
+- [Best way to eat grapes](/guides/grapes-vines/best-way-to-eat-grapes/)

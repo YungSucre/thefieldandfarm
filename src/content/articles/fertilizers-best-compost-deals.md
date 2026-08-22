@@ -98,3 +98,9 @@ Keep bags dry and off the ground. If you open a bag, use it within a few weeks. 
 ## The Bottom Line
 
 The best compost deal depends on your garden size and budget. For most home gardeners, buying bagged compost on sale in spring or fall is the most practical. If you need more than 2 cubic yards, go bulk and split the delivery with a neighbor. And if you have the space, start a DIY bin for a nearly free, sustainable source of compost. Whatever you choose, always check the quality first, and you'll get the best value for your soil.
+
+
+## Related guides
+
+- [Best compost deals this week](/guides/fertilizers/best-compost-deals-this-week/)
+- [Best compost deals uk](/guides/fertilizers/best-compost-deals-uk/)

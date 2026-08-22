@@ -4,10 +4,13 @@ description: "Learn the essential steps to start beekeeping in 2026: costs, equi
 vertical: "beekeeping"
 verticalName: "Beekeeping"
 slug: "be-beekeeping-for-beginners"
-status: "draft"
+status: "published"
 pubDate: 2026-08-22
 affiliate_ready: false
+hero_image: "/images/articles/be-beekeeping-for-beginners/hero.jpg"
+hero_alt: "A beekeeper in protective suit examining a hive outdoors during spring."
 ---
+
 
 Starting beekeeping is a rewarding project for any gardener or homesteader, but it requires planning and a modest investment. This guide covers the essentials: what you need, how much it costs, and how to get your first hive up and running. Follow these steps, and you will be on your way to healthy bees and your own honey.
 

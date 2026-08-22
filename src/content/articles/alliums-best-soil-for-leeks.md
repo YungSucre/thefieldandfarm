@@ -4,10 +4,13 @@ description: "Learn the ideal soil for leeks: loose, fertile, well-drained with 
 vertical: "alliums"
 verticalName: "Onions, Garlic & Alliums"
 slug: "best-soil-for-leeks"
-status: "draft"
+status: "published"
 pubDate: 2026-08-22
 affiliate_ready: false
+hero_image: "/images/articles/best-soil-for-leeks/hero.jpg"
+hero_alt: "A farmer harvests leeks in a sunlit field, demonstrating agricultural work during daylight."
 ---
+
 
 Leeks are heavy feeders that need loose, fertile soil with a pH between 6.0 and 7.0. The best soil is a sandy loam rich in organic matter, which allows the long white shafts to develop without obstruction. If you start with that, you are halfway to a good harvest.
 

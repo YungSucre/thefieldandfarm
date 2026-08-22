@@ -107,3 +107,9 @@ For grilling, any grill works. A charcoal grill adds more smoke, but gas is fine
 ## The Bottom Line
 
 Roasting is the best all-around method for cooked tomatillos because it adds flavor without much effort. Boiling is quicker and preserves brightness, while raw is best for fresh applications. Try the roasted salsa verde recipe above, and you'll see why tomatillos are a staple in my kitchen. Experiment with each method to find your favorite for different dishes.
+
+
+## Related guides
+
+- [Best fertilizer for tomatillos](/guides/eggplant-nightshades/best-fertilizer-for-tomatillos/)
+- [Best soil for tomatillos](/guides/eggplant-nightshades/best-soil-for-tomatillos/)

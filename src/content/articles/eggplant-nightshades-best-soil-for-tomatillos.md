@@ -95,3 +95,9 @@ A: Absolutely. Raised beds offer excellent drainage and let you control the soil
 ## The Bottom Line
 
 The best soil for tomatillos is loose, loamy, rich in organic matter, with a pH of 6.0 to 7.0. Test your soil, amend with compost and lime or sulfur as needed, and fertilize with a balanced product. Plant after the last frost, space 24 to 36 inches apart, and keep the soil consistently moist. With these steps, you'll get a healthy harvest of tangy fruits for salsa and sauces. Start by testing your soil this week, then prepare your beds with compost before planting.
+
+
+## Related guides
+
+- [Best fertilizer for tomatillos](/guides/eggplant-nightshades/best-fertilizer-for-tomatillos/)
+- [Best way to cook tomatillos](/guides/eggplant-nightshades/best-way-to-cook-tomatillos/)

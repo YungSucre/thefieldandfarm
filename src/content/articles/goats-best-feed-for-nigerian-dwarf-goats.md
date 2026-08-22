@@ -91,3 +91,9 @@ Yes, in moderation. Vegetable peels, fruit, and stale bread are fine, but avoid 
 ## The Bottom Line
 
 The best feed for Nigerian Dwarf goats is not a single product but a balanced plan: free-choice grass hay, targeted grain for production, loose minerals, and fresh water. Start with good hay and minerals, then adjust based on your goat's condition and needs. Monitor body condition and milk production, and you'll have healthy, productive goats. In 2026, budget $20-$40 per goat per month, and you'll be set.
+
+
+## Related guides
+
+- [Best fence for nigerian dwarf goats](/guides/goats/best-fence-for-nigerian-dwarf-goats/)
+- [Backyard goats for beginners](/guides/goats/backyard-goats-for-beginners/)

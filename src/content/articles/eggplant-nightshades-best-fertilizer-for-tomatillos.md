@@ -106,3 +106,9 @@ This is usually too much nitrogen and not enough phosphorus. Stop high-nitrogen 
 ## The Bottom Line
 
 The best fertilizer for tomatillos is a balanced 10-10-10 at planting, followed by a high-nitrogen side-dress in early growth, then a phosphorus-potassium boost at flowering. Organic options like compost, blood meal, and bone meal work just as well, if not better, for soil health. Test your soil, adjust pH, and avoid over-fertilizing. With the right feeding schedule, you will get a heavy harvest of tangy fruit for salsas and sauces. Start with good soil, feed consistently, and your tomatillos will reward you.
+
+
+## Related guides
+
+- [Best soil for tomatillos](/guides/eggplant-nightshades/best-soil-for-tomatillos/)
+- [Best way to cook tomatillos](/guides/eggplant-nightshades/best-way-to-cook-tomatillos/)

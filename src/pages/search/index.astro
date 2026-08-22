@@ -1,0 +1,87 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const initialQ = Astro.url.searchParams.get("q")?.trim() ?? "";
+---
+
+<BaseLayout
+  title="Search: The Field &amp; Farm"
+  description="Search The Field and Farm practical guides: growing vegetables, raising livestock, soil, compost, and food preservation."
+  canonical="/search/"
+>
+  <div style="max-width:720px;padding-top:3rem;">
+    <p class="eyebrow">Search</p>
+    <h1>Search the guides</h1>
+    <p class="lead">A crop, an animal, a problem. Titles first, sorted by what you actually typed.</p>
+
+    <form class="search-form" action="/search/" method="get" role="search" style="display:flex;gap:0.6rem;margin:1.4rem 0 0.4rem;max-width:34rem;">
+      <label class="sr-only" for="q" style="position:absolute;left:-9999px;">Search the guides</label>
+      <input
+        id="q"
+        name="q"
+        type="search"
+        value={initialQ}
+        placeholder="e.g. turnips, chicken coop, compost…"
+        autocomplete="off"
+        autofocus
+        style="flex:1;padding:0.65rem 0.95rem;background:#fffdf6;border:1px solid var(--line);border-radius:12px;color:var(--ink);font-size:1rem;"
+      />
+      <button type="submit" class="btn">Search</button>
+    </form>
+
+    <p class="search-status" id="search-status" aria-live="polite" style="color:var(--muted);font-size:0.92rem;margin:0.8rem 0 0.2rem;"></p>
+    <ul class="search-results" id="search-results" style="list-style:none;padding:0;margin:0.6rem 0 2rem;max-width:34rem;"></ul>
+  </div>
+</BaseLayout>
+
+<style>
+  .search-results li { border-bottom: 1px solid var(--line); }
+  .search-hit { display: block; padding: 0.7rem 0.2rem; color: var(--ink); text-decoration: none; }
+  .search-hit:hover { color: var(--accent); }
+  .search-hit-title { display: block; font-size: 0.98rem; font-weight: 600; }
+  .search-hit-section { display: block; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.15rem; }
+  .search-hit-desc { display: block; font-size: 0.88rem; color: var(--muted); }
+</style>
+
+<script>
+  const resultsEl = document.getElementById("search-results");
+  const statusEl = document.getElementById("search-status");
+  const input = document.getElementById("q");
+  // page pré-rendue : lire le query au runtime
+  const initialQ = new URLSearchParams(window.location.search).get("q")?.trim() ?? "";
+
+  function score(item, tokens) {
+    const hay = `${item.title} ${item.description} ${item.vertical}`.toLowerCase();
+    let s = 0;
+    for (const t of tokens) {
+      if (hay.includes(t)) s += 1;
+      if (item.title.toLowerCase().includes(t)) s += 2;
+    }
+    return s;
+  }
+
+  async function run() {
+    const q = (input.value || "").trim();
+    if (!q) {
+      resultsEl.innerHTML = "";
+      statusEl.textContent = "";
+      return;
+    }
+    const tokens = q.toLowerCase().split(/\s+/).filter(Boolean);
+    const index = await fetch("/search-index.json").then((r) => r.json());
+    const hits = index
+      .map((item) => ({ item, s: score(item, tokens) }))
+      .filter((h) => h.s > 0)
+      .sort((a, b) => b.s - a.s)
+      .slice(0, 20);
+    statusEl.textContent = hits.length ? `${hits.length} guide${hits.length > 1 ? "s" : ""} found` : "No guides found. Try a different crop, animal, or problem.";
+    resultsEl.innerHTML = hits
+      .map(
+        (h) => `<li><a class="search-hit" href="${h.item.url}"><span class="search-hit-section">${h.item.vertical}</span><span class="search-hit-title">${h.item.title}</span><span class="search-hit-desc">${h.item.description}</span></a></li>`
+      )
+      .join("");
+  }
+
+  input.addEventListener("input", run);
+  run();
+</script>

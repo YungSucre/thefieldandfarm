@@ -4,10 +4,13 @@ description: "Discover the best fertilizer for pole beans: nitrogen needs, organ
 vertical: "beans-legumes"
 verticalName: "Beans & Legumes"
 slug: "best-fertilizer-for-pole-beans"
-status: "draft"
+status: "published"
 pubDate: 2026-08-22
 affiliate_ready: false
+hero_image: "/images/articles/best-fertilizer-for-pole-beans/hero.jpg"
+hero_alt: "Expansive cornfield under a dramatic sky at sunset, showcasing the beauty of agriculture."
 ---
+
 
 The best fertilizer for pole beans is one that is low in nitrogen relative to phosphorus and potassium, such as a 5-10-10 or compost blended with bone meal. Pole beans fix their own nitrogen from the air, so too much nitrogen pushes leaves instead of pods. Apply a balanced fertilizer at planting and a side dressing of compost or low-nitrogen fertilizer when vines start to flower.
 

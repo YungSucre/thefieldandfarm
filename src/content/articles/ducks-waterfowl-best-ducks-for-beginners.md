@@ -82,6 +82,12 @@ Ducks can live 8 to 12 years, depending on breed and care. Pekins often live 8 t
 
 Ducks are generally quieter than chickens. Females make a classic quack, but males have a raspy, quieter call. They are less likely to disturb neighbors.
 
+
+## Related guides
+
+- [Best coop for ducks](/guides/ducks-waterfowl/best-coop-for-ducks/)
+- [Best duck breeds for beginners](/guides/ducks-waterfowl/best-duck-breeds-for-beginners/)
+
 ## The bottom line
 
 For beginners, choose Pekins for meat, Khaki Campbells for eggs, or Rouens for a dual-purpose breed. Set up a secure coop, provide clean water, and feed a proper duck diet. With minimal investment, you'll enjoy fresh eggs and pest control in your garden. Start with 3 to 5 ducks and learn as you go.

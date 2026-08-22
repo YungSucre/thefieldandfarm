@@ -64,6 +64,12 @@ Ladybugs prefer aphids. For spider mites, use predatory mites like Phytoseiulus 
 **How often should I spray?**
 For both, spray every 5-7 days for at least three applications to break the life cycle. Spider mites may need more frequent applications if temperatures are above 85°F.
 
+
+## Related guides
+
+- [Aphids vs scale](/guides/garden-pests/aphids-vs-scale/)
+- [Aphids vs thrips](/guides/garden-pests/aphids-vs-thrips/)
+
 ## The bottom line
 
 Aphids and spider mites are different pests with different treatments. Identify correctly by looking for webbing (spider mites) vs. sticky honeydew (aphids). Start with water blasts and insecticidal soap for aphids; for spider mites, prune and use a miticide. Prevention through healthy plants and beneficial insects is your best long-term strategy. Act quickly, because both pests reproduce fast, but with the right approach, you can keep your garden thriving.

@@ -4,10 +4,13 @@ description: "Learn the best way to cook chickpeas from dried or fresh, with soa
 vertical: "beans-legumes"
 verticalName: "Beans & Legumes"
 slug: "best-way-to-cook-chickpeas"
-status: "draft"
+status: "published"
 pubDate: 2026-08-22
 affiliate_ready: false
+hero_image: "/images/articles/best-way-to-cook-chickpeas/hero.jpg"
+hero_alt: "High angle view of cooked chickpeas in a metal bowl, showcasing a healthy vegan food option."
 ---
+
 
 The best way to cook chickpeas is to soak them overnight and simmer gently until tender, about 1.5 to 2 hours, or use a pressure cooker for 35 to 40 minutes. Both methods give you creamy, nutty beans that beat canned versions every time. Here is how to do it right, whether you grew your own or bought dry.
 

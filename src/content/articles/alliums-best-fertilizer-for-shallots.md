@@ -4,10 +4,13 @@ description: "Learn the best fertilizer for shallots, including NPK ratios, appl
 vertical: "alliums"
 verticalName: "Onions, Garlic & Alliums"
 slug: "best-fertilizer-for-shallots"
-status: "draft"
+status: "published"
 pubDate: 2026-08-22
 affiliate_ready: false
+hero_image: "/images/articles/best-fertilizer-for-shallots/hero.jpg"
+hero_alt: "A basket of organic garlic and shallots on display at a market stall, showcasing fresh produce."
 ---
+
 
 The best fertilizer for shallots is a balanced blend with a slight emphasis on phosphorus and potassium, such as a 10-10-10 or 5-10-10, applied at planting and again when bulbs begin to form. Avoid high-nitrogen fertilizers, which promote leafy growth at the expense of bulb development. For organic growers, composted manure or a commercial organic mix with similar ratios works well.
 

@@ -81,6 +81,12 @@ A: Yes, if you have at least 200 square feet per goat and good fencing. Nigerian
 **Q: How much time do goats need daily?**
 A: Plan on 30 minutes a day for feeding, checking, and cleaning. Add time for hoof trimming every month or two.
 
+
+## Related guides
+
+- [Best feed for nigerian dwarf goats](/guides/goats/best-feed-for-nigerian-dwarf-goats/)
+- [Best fence for nigerian dwarf goats](/guides/goats/best-fence-for-nigerian-dwarf-goats/)
+
 ## The bottom line
 
 Backyard goats are rewarding but not a low-maintenance pet. They need good fencing, daily care, and a financial commitment. Start with two Nigerian Dwarfs, invest in solid fencing, and learn hoof trimming early. With that foundation, you'll enjoy fresh milk, brush control, and a lot of personality. If you're not ready for that, consider volunteering at a farm or taking a goat care class first. It's better to be prepared than to learn the hard way like I did.

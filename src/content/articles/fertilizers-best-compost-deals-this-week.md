@@ -89,6 +89,12 @@ For a new raised bed (4x8 feet, 12 inches deep), you need about 1.5 cubic yards.
 **What is the best time to buy compost?**
 Early spring (March to May) has the most sales, but late fall (September to November) often has clearance deals as stores make room for winter. This week is a good time because of spring promotions.
 
+
+## Related guides
+
+- [Best compost deals uk](/guides/fertilizers/best-compost-deals-uk/)
+- [Best compost deals](/guides/fertilizers/best-compost-deals/)
+
 ## The bottom line
 
 The best compost deals this week are at local landscape supply yards or municipal facilities, where bulk prices are $25 to $45 per cubic yard. If you need just a few bags, check big-box store sales and use coupons or loyalty discounts. Always compare price per cubic foot, not per bag. And remember: even a mediocre deal on good compost beats a great deal on poor quality. Buy screened, OMRI-certified compost if possible, and store it in a dry place until you are ready to use it. Your garden will thank you.

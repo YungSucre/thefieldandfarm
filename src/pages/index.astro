@@ -71,6 +71,10 @@ const fmtDate = (d: Date) =>
         When to plant, how to fix yellow leaves, which breed to start with, how to store a
         harvest. {total} guide{total > 1 ? "s" : ""} published, {nVertical} topics, checked and dated.
       </p>
+      <form action="/search/" method="get" role="search" style="display:flex;gap:0.6rem;max-width:34rem;margin-top:1.5rem;">
+        <input name="q" type="search" placeholder="e.g. how to grow turnips, chicken coop…" autocomplete="off" aria-label="Search guides" style="flex:1;padding:0.7rem 1rem;font-size:0.95rem;background:#fffdf6;border:1px solid var(--line);border-radius:12px;color:var(--ink);" />
+        <button type="submit" class="btn">Search</button>
+      </form>
     </div>
   </section>
 

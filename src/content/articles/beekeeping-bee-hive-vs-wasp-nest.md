@@ -4,10 +4,13 @@ description: "Learn to tell a bee hive from a wasp nest by sight, location, and 
 vertical: "beekeeping"
 verticalName: "Beekeeping"
 slug: "bee-hive-vs-wasp-nest"
-status: "draft"
+status: "published"
 pubDate: 2026-08-22
 affiliate_ready: false
+hero_image: "/images/articles/bee-hive-vs-wasp-nest/hero.jpg"
+hero_alt: "Low angle view of a wasp nest in a leafless tree, showcasing natural textures against a clear sky."
 ---
+
 
 The first thing to know: a bee hive is a home for honey bees, a social colony that can live for years and is essential for pollination. A wasp nest is a papery structure built by wasps or hornets, which are predators and scavengers, and the nest dies off each winter. You can tell them apart by appearance, location, and behavior. This guide gives you the exact differences and what to do if you find one near your garden or homestead.
 

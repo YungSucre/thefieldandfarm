@@ -81,6 +81,12 @@ Ants feed on honeydew and will defend aphids from predators. Use sticky barriers
 
 A simple spray of 1 teaspoon of mild dish soap per quart of water can work on aphids, but test on a leaf first. For scale, a homemade oil spray (1 cup vegetable oil mixed with 1 tablespoon dish soap, then dilute 1 tablespoon per quart of water) can help, but it is less effective than commercial horticultural oils.
 
+
+## Related guides
+
+- [Aphids vs spider mites](/guides/garden-pests/aphids-vs-spider-mites/)
+- [Aphids vs thrips](/guides/garden-pests/aphids-vs-thrips/)
+
 ## The bottom line
 
 Aphids and scale are both common garden pests, but they require different strategies. Aphids are easier to control with water, soap, and beneficial insects. Scale need a more targeted approach: prune, scrub, and use horticultural oils or systemics at the right time. Regular monitoring and early action are your best defenses. Start with the least toxic method and escalate only if needed. With patience and consistent effort, you can keep both pests in check and protect your plants.

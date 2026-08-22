@@ -4,10 +4,13 @@ description: "Learn the best way to cook leeks: clean, slice, and sauté or roas
 vertical: "alliums"
 verticalName: "Onions, Garlic & Alliums"
 slug: "best-way-to-cook-leeks"
-status: "draft"
+status: "published"
 pubDate: 2026-08-22
 affiliate_ready: false
+hero_image: "/images/articles/best-way-to-cook-leeks/hero.jpg"
+hero_alt: "Freshly sliced leeks on a wooden cutting board with a sharp knife, ideal for cooking and food preparation themes."
 ---
+
 
 If you've grown leeks, you know they're not just oversized scallions. The best way to cook them is to clean them thoroughly, slice them, and cook them slowly in butter or oil until they're soft and sweet. That's it. Leeks don't need complicated techniques; they need proper prep and gentle heat. Here's how to do it right, whether you're using them in soups, sides, or as a main dish.
 

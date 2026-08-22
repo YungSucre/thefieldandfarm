@@ -85,6 +85,12 @@ No, but they need a shallow water source for dunking their heads. A kiddie pool 
 **How do I predator-proof the coop?**
 Use 1/2 inch hardware cloth on all vents and windows. Bury the wire 12 inches into the ground around the run, or use an apron of wire extending outward. Secure all doors with latches that raccoons cannot open, and lock them at night.
 
+
+## Related guides
+
+- [Best ducks for beginners](/guides/ducks-waterfowl/best-ducks-for-beginners/)
+- [Best duck breeds for beginners](/guides/ducks-waterfowl/best-duck-breeds-for-beginners/)
+
 ## The bottom line
 
 The best duck coop is not a specific brand; it is a dry, ventilated, predator-proof box with enough floor space. Buy a garden shed or build a simple 4x4 coop for $300 to $600. Add hardware cloth, a secure door, and deep bedding. Your ducks will be safe, and you will spend less time cleaning and repairing. Start with a plan, measure your flock, and build or buy for the worst predator in your area, not the best weather day.

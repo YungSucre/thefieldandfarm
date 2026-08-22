@@ -80,6 +80,12 @@ Run a hot wire 4 to 6 inches off the ground on the outside of the fence. Alterna
 
 Cattle panels with T-posts are the cheapest upfront, at about $2 per linear foot. But for a larger area, woven wire with electric is more cost-effective over time because it lasts longer and requires less maintenance.
 
+
+## Related guides
+
+- [Best feed for nigerian dwarf goats](/guides/goats/best-feed-for-nigerian-dwarf-goats/)
+- [Backyard goats for beginners](/guides/goats/backyard-goats-for-beginners/)
+
 ## The bottom line
 
 For Nigerian dwarf goats, invest in a 4-foot woven wire fence with 4x4 mesh, a top electric wire, and a bottom hot wire. It costs about $3 per linear foot, takes a weekend to install, and will last 20 years with minimal upkeep. This setup stops escapes and keeps your goats safe. Start by measuring your perimeter, then order materials. In a weekend, you will have a fence that works.

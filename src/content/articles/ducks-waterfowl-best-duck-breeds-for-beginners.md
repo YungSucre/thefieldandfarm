@@ -71,6 +71,12 @@ Most domestic duck breeds are too heavy to fly, but some like the Khaki Campbell
 **How many eggs will I get?**
 Khaki Campbells lay 280 to 320 eggs a year, Welsh Harlequins lay 200 to 250, and Pekins lay 100 to 150. Expect fewer eggs in winter unless you provide supplemental light.
 
+
+## Related guides
+
+- [Best ducks for beginners](/guides/ducks-waterfowl/best-ducks-for-beginners/)
+- [Best coop for ducks](/guides/ducks-waterfowl/best-coop-for-ducks/)
+
 ## The bottom line
 
 For beginners, Khaki Campbell, Pekin, and Welsh Harlequin are the best choices. They are hardy, calm, and serve clear purposes: eggs, meat, or both. Start with a small flock, set up secure housing, and feed them properly. You'll have fresh eggs and a rewarding experience in no time.

@@ -108,3 +108,9 @@ A 4x8 foot raised bed, 1 foot deep, needs about 32 cubic feet of compost. That's
 ## The Bottom Line
 
 The best compost deals in the UK come from timing your purchases, comparing online and local prices, and considering bulk options. In 2026, you can expect to pay £3-£8 for a 50L bag of multi-purpose compost, but with seasonal sales and bulk buying, you can get that down to £2-£4 per bag. Always check the quality before you buy, and don't be afraid to try own-brand options. With a little planning, you'll have all the compost you need without breaking the bank.
+
+
+## Related guides
+
+- [Best compost deals this week](/guides/fertilizers/best-compost-deals-this-week/)
+- [Best compost deals](/guides/fertilizers/best-compost-deals/)
