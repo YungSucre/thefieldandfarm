@@ -13,7 +13,7 @@ CONTENT = ROOT / "src" / "content" / "articles"
 PUBLIC = ROOT / "public" / "images" / "articles"
 OUTPUTS = ROOT / "outputs"
 STATE = OUTPUTS / "produce_ff_state.json"
-TITLES = ROOT / "demo_titles.jsonl"
+TITLES = ROOT / "outputs" / "titles_clean.jsonl"
 
 sys.path.insert(0, "/root/niche-finder/scripts")
 def load_key(name):
@@ -111,7 +111,8 @@ def fetch_pexels(query, slug, kind):
     q = urllib.parse.quote(query)
     url = f"https://api.pexels.com/v1/search?query={q}&per_page=5&orientation=landscape"
     try:
-        req = urllib.request.Request(url, headers={"Authorization": PEXELS_KEY})
+        req = urllib.request.Request(url, headers={"Authorization": PEXELS_KEY,
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36"})
         with urllib.request.urlopen(req, timeout=20) as r:
             d = json.loads(r.read())
         photos = d.get("photos", [])
@@ -197,7 +198,9 @@ def main():
                     body2 = body2[: h2s[0]] + f"\n![{item['title']}]({sec1})\n" + body2[h2s[0]:]
                 if len(h2s) >= 3 and sec2:
                     body2 = body2[: h2s[1]] + f"\n![{item['title']}]({sec2})\n" + body2[h2s[1]:]
-                # frontmatter
+                # frontmatter : GATE QUALITÉ — pas de publication sans hero
+                # (règle user : sans hero = draft, pas published)
+                status = "published" if hero_img else "draft"
                 today = datetime.date.today().isoformat()
                 fm = (
                     "---\n"
@@ -206,7 +209,7 @@ def main():
                     f'vertical: "{item["vertical"]}"\n'
                     f'verticalName: "{vertical_name(item["vertical"])}"\n'
                     f'slug: "{slug}"\n'
-                    'status: "published"\n'
+                    f'status: "{status}"\n'
                     f"pubDate: {today}\n"
                     'affiliate_ready: false\n'
                 )

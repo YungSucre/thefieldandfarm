@@ -6,9 +6,8 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 const articles = await getCollection("articles", ({ data }) => data.status === "published");
-// FIX 2026-08-22 : dédup par CONTENU: les articles "7 Mistakes New X…" ont des
-// chemins hero DIFFÉRENTS mais le MÊME fichier Pexels (tasse) → 6 cards identiques.
-// Hash md5 du fichier (public/ + chemin) pour ne garder que des images uniques.
+// dédup par CONTENU : les articles aux chemins hero différents mais MÊME fichier
+// Pexels → cards identiques. Hash md5 du fichier pour ne garder que des images uniques.
 const sorted = articles.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const seenHashes = new Set();
 const latest: typeof sorted = [];
@@ -45,70 +44,72 @@ const fmtDate = (d: Date) =>
 ---
 
 <BaseLayout title="The Field &amp; Farm: Practical Guides for Gardeners and Small Farmers" description="Growing vegetables, raising livestock, soil and compost, food preservation, and farm business guides: 80+ topics across 8 families. Fact-first, current, practical.">
-  <section class="hero-split">
-    <div class="hero-split-text">
-      <span class="eyebrow">For gardeners &amp; farmers</span>
-      <h1>Run your practice like a business.</h1>
-      <p class="lead">
-        Fact-first guides on taxes, accounting, software, hiring, and compliance for owners of 37 practice types.
+  <!-- Hero plein écran -->
+  <section class="home-hero">
+    <img class="home-hero-bg" src="/images/hero-home.jpg" alt="" fetchpriority="high" />
+    <div class="home-hero-overlay"></div>
+    <div class="home-hero-content">
+      <p class="home-hero-eyebrow">For gardeners &amp; small farmers</p>
+      <h1>Grow it. Raise it. Preserve it.</h1>
+      <p class="home-hero-sub">
+        Practical, honest guides on growing vegetables, raising livestock, building soil,
+        and storing the harvest. Written by people who have made the mistakes, so you do not have to.
       </p>
       <div class="hero-ctas">
-        <a class="btn" href="#practice-types">Find your guide</a>
-        <a class="btn btn-ghost-plain" href="#guides">Latest guides</a>
+        <a class="btn" href="/guides/">Start with a guide</a>
+        <a class="btn btn-ghost" href="#topics">Browse topics</a>
       </div>
-      <p class="hero-proof">{total} guides · {nVertical} topics · updated {year}</p>
     </div>
-    <img class="hero-split-img" src="/images/hero-home.jpg" alt="Doctor working on practice management at her office desk" loading="eager" />
   </section>
 
-  <div class="stats-bar">
-    <div class="stat"><b>{total}</b><span>guides published</span></div>
-    <div class="stat"><b>{nVertical}</b><span>practice types</span></div>
-    <div class="stat"><b>{year}</b><span>all guides reviewed</span></div>
-  </div>
+  <!-- Ce que fait ce site -->
+  <section class="section">
+    <div class="section-head">
+      <p class="eyebrow">What this field guide is</p>
+      <h2>Answers for the questions that actually come up in the garden and the barn.</h2>
+      <p>
+        When to plant, how to fix yellow leaves, which breed to start with, how to store a
+        harvest. {total} guide{total > 1 ? "s" : ""} published, {nVertical} topics, checked and dated.
+      </p>
+    </div>
+  </section>
 
-  <section id="practice-types" style="margin-top:2.5rem;">
-    <h2>Find your practice type</h2>
-    <p class="lead" style="margin-bottom:1rem;">Own a practice? Jump straight to the guides for your field.</p>
-    <nav class="family-chips" aria-label="Practice families">
-      {CATEGORIES.map((cat) => (
-        <a href={`#family-${cat.id}`}>{cat.name}</a>
+  <!-- Familles -->
+  <section class="section" id="topics" style="padding-top:0;">
+    <div class="section-head">
+      <p class="eyebrow">Topics</p>
+      <h2>Eight families, {nVertical} growing topics.</h2>
+    </div>
+    <div class="families">
+      {CATEGORIES.map((cat, i) => (
+        <a class="family-card" href={`/guides/${cat.verticals[0].id}/`}>
+          <span class="fc-num">{String(i + 1).padStart(2, "0")}</span>
+          <h3>{cat.name}</h3>
+          <p>
+            {cat.verticals.length} topics:{" "}
+            {cat.verticals.slice(0, 4).map((v) => v.name).join(", ")}.
+          </p>
+        </a>
       ))}
-    </nav>
-    {CATEGORIES.map((cat) => (
-      <div id={`family-${cat.id}`} style="margin-top:2rem;scroll-margin-top:6rem;">
-        <h3 style="margin-bottom:0.75rem;">{cat.name}</h3>
-        <div class="vertical-row">
-          {cat.verticals.map((v) => {
-            const count = byVertical[v.id] || 0;
-            const last = lastByVertical[v.id];
-            return (
-              <a class="vertical-card" href={`/guides/${v.id}/`}>
-                {last && last.data.hero_image && (
-                  <img class="thumb" src={last.data.hero_image} alt="" loading="lazy" />
-                )}
-                <div class="vc-body">
-                  <h3>{v.name}</h3>
-                  <p>{count === 0 ? "Guides coming soon." : `${count} guide${count > 1 ? "s" : ""}`}</p>
-                </div>
-              </a>
-            );
-          })}
-        </div>
-      </div>
-    ))}
+    </div>
   </section>
 
-  <section id="guides" style="margin-top:3rem;">
-    <h2>Latest guides</h2>
+  <!-- Derniers guides -->
+  <section class="section" id="guides" style="padding-top:0;">
+    <div class="section-head">
+      <p class="eyebrow">Latest guides</p>
+      <h2>Fresh from the field.</h2>
+    </div>
     {total === 0 && (
       <div class="card"><strong>Launching soon.</strong> Our first guides are being prepared.</div>
     )}
     <div class="grid">
       {latest.map((a) => (
-        <article class="article-card has-thumb">
+        <article class="article-card">
           {a.data.hero_image && (
-            <a href={`/guides/${a.data.vertical}/${a.data.slug}/`}><img class="thumb" src={a.data.hero_image} alt={a.data.hero_alt || a.data.title} loading="lazy" /></a>
+            <a href={`/guides/${a.data.vertical}/${a.data.slug}/`}>
+              <img class="thumb" src={a.data.hero_image} alt={a.data.hero_alt || a.data.title} loading="lazy" />
+            </a>
           )}
           <div class="card-body">
             <span class="tag">{a.data.verticalName}</span>
@@ -121,31 +122,39 @@ const fmtDate = (d: Date) =>
     </div>
   </section>
 
-  <section style="margin-top:3rem;">
-    <h2>Why gardeners and farmers rely on these guides</h2>
+  <!-- Pourquoi -->
+  <section class="section" style="padding-top:0;">
+    <div class="section-head">
+      <p class="eyebrow">Why these guides</p>
+      <h2>Written for people with dirt under their nails.</h2>
+    </div>
     <div class="why-grid">
       <div class="why-card">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4" /><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" /></svg>
         <h3>Fact-first, no fluff</h3>
-        <p>Every guide answers one concrete business question: which software, how to handle taxes, what insurance you actually need.</p>
+        <p>Every guide answers one concrete question: when to plant, how to fix it, what actually works in the field.</p>
       </div>
       <div class="why-card">
         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M8 3v4M16 3v4M3 10h18" /></svg>
         <h3>Checked and dated</h3>
-        <p>Information is current, with figures in realistic ranges and the review date on every guide. No recycled evergreen content.</p>
+        <p>Planting dates, prices, and realistic yields, reviewed and dated on every guide. No recycled content.</p>
       </div>
       <div class="why-card">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5a2 2 0 012-2h12a2 2 0 012 2v14" /><path d="M2 19h20" /><path d="M9 7h6M9 11h6M9 15h4" /></svg>
-        <h3>Built for your practice type</h3>
-        <p>37 practice types, from dental and legal to studios and agencies. Guides are tailored to how each one actually operates.</p>
+        <h3>Built for every crop</h3>
+        <p>{nVertical} topics, from tomatoes to turkeys, organized so you land on the answer fast.</p>
       </div>
     </div>
   </section>
 
   <section class="section-soft">
-    <h3 style="margin-top:0;">Who we write for</h3>
+    <p class="eyebrow">Who we write for</p>
+    <h3 style="margin-top:0;">You, in the garden or the barn.</h3>
     <p style="margin-bottom:0;">
-      If you own a practice, or are planning to buy or start one, you face a specific set of business problems: which software to use, how to handle taxes, how to hire your first employee, what insurance you actually need. We answer those questions with concrete, current information, checked and dated on every guide.
+      If you grow food, raise animals, or want to, you face a specific set of practical
+      questions: when to plant, how to improve the soil, what to feed the flock, how to
+      store the harvest. We answer those questions with concrete, current information,
+      checked and dated on every guide.
     </p>
   </section>
 </BaseLayout>
