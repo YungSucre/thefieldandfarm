@@ -30,13 +30,39 @@ while true; do
   # 2. heroes (timeout)
   timeout 300 python3 fetch_heroes.py >> $LOG 2>&1 || log "  heroes timeout"
 
+  # 2.5 GATE HERO (règle user : PAS de publication sans hero)
+  NOHERO=$(python3 - << 'PYEOF'
+import re
+from pathlib import Path
+CONTENT = Path("src/content/articles")
+n = 0
+for md in CONTENT.glob("*.md"):
+    t = md.read_text()
+    m = re.search(r'status: "(\w+)"', t)
+    if m and m.group(1) != "published":
+        continue
+    m2 = re.search(r'hero_image: "([^"]+)"', t)
+    if not m2 or not Path("public", m2.group(1).lstrip("/")).exists():
+        n += 1
+print(n)
+PYEOF
+)
+  log "  publiés sans hero: $NOHERO"
+  if [ "$NOHERO" != "0" ]; then
+    log "  ⛔ GATE HERO: $NOHERO articles sans hero — PAS de push, on continue la prod"
+  fi
+
   # 3. build + push
   if npm run build > /tmp/ff_build.log 2>&1; then
     TOTAL=$(ls src/content/articles/*.md | wc -l)
     log "  build OK ($TOTAL articles)"
     git add -A
     git -c user.name="hermes" -c user.email="hermes@nousresearch.com" commit -q -m "Auto-vague $VAGUE: $TOTAL articles" 2>&1 | tail -1 >> $LOG || true
-    git push -q "$REPO_URL" HEAD:main 2>&1 | tail -1 >> $LOG || log "  push échoué"
+    if [ "$NOHERO" = "0" ]; then
+      git push -q "$REPO_URL" HEAD:main 2>&1 | tail -1 >> $LOG || log "  push échoué"
+    else
+      log "  (commit local seulement — gate hero active)"
+    fi
   else
     log "  BUILD FAIL — on continue"
   fi
