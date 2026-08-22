@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { VERTICALS } from "../../../config";
+
+export async function getStaticPaths() {
+  return VERTICALS.map((v) => ({ params: { vertical: v.id }, props: { v } }));
+}
+
+const { v } = Astro.props;
+const articles = await getCollection("articles", ({ data }) => data.status === "published" && data.vertical === v.id);
+const sorted = articles.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const INTROS = {
+  legal: "Running a law firm is a business first: billing, trust accounting, payroll, insurance, and compliance on top of the practice of law. These guides cover the business side for solo attorneys and small firms, from taxes to software and hiring.",
+  medical: "A medical practice is a business as much as a clinical operation: insurance contracting, staffing, equipment, and compliance shape every decision. These guides cover the business side for physicians and small clinics.",
+  dental: "A dental practice combines clinical care with real business demands: equipment, staffing, insurance billing, OSHA and HIPAA compliance. These guides cover the business side for new and small dental practices.",
+  therapy: "Therapy and counseling practices are often solo from day one, which makes billing, insurance panels, and burnout prevention especially personal. These guides cover the business side of running a therapy practice.",
+  vet: "Veterinary clinics face their own business realities: equipment costs, staffing, licensing, and the emotional weight of the work. These guides cover the practical side of running a vet practice.",
+  "physical-therapy": "Physical therapy practices live on insurance billing, patient volume, and careful scheduling. These guides cover the business side: contracts, equipment, hiring, and compliance.",
+  pharmacy: "An independent pharmacy is a retail operation with heavy regulation: margins, inventory, reimbursements, and compliance. These guides cover the business side of pharmacy ownership.",
+  chiro: "Chiropractic offices are often cash-based and owner-run, which makes pricing, insurance, and software decisions especially personal. These guides cover the business side of chiropractic.",
+  optometry: "Optometry practices mix clinical care with optical retail, which creates a unique set of business questions: inventory, equipment, insurance panels, and staffing. These guides cover the practical side.",
+  podiatry: "Podiatry practices combine surgical and office-based care with insurance-heavy billing. These guides cover the business side: equipment, staffing, and practice management.",
+  audiology: "Audiology practices are equipment-intensive and insurance-dependent, from hearing aids to diagnostic gear. These guides cover the business side of audiology.",
+  "speech-therapy": "Speech therapy practices are often small, pediatric-focused, and driven by referrals and school contracts. These guides cover the business side of an SLP practice.",
+  medspa: "Med spas blend medical oversight with retail aesthetics: injectables, lasers, memberships, and marketing. These guides cover the business side of medical aesthetics.",
+  accounting: "An accounting firm sells expertise on a deadline cycle: tax season, billing by the hour, and staffing. These guides cover the business side of running an accounting practice.",
+  "financial-advisory": "Advisory firms are built on trust, compliance, and recurring revenue: licensing, custody rules, and client acquisition. These guides cover the business side of financial advisory.",
+};
+const intro = INTROS[v.id] || `Practical guides for ${v.name.toLowerCase()} owners.`;
+---
+
+<BaseLayout title={`${v.name} Guides: The Field &amp; Farm`} description={`Practical guides on taxes, accounting, software, hiring, and compliance for ${v.name.toLowerCase()} owners.`}>
+  <nav style="font-size:0.9rem;color:var(--muted);margin-bottom:1.5rem;">
+    <a href="/">Home</a> › <a href="/guides/">Guides</a> › {v.name}
+  </nav>
+  <span class="eyebrow" style="display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:0.35rem 0.8rem;border-radius:999px;margin-bottom:1.2rem;">{v.name}</span>
+  <h1>{v.name} guides</h1>
+  <p class="lead">{intro}</p>
+
+  {sorted.length === 0 && (
+    <div class="card"><strong>Coming soon.</strong> Guides for {v.name} owners are being prepared.</div>
+  )}
+
+  <div class="grid">
+    {sorted.map((a) => (
+      <article class="article-card">
+        <span class="tag">{a.data.verticalName}</span>
+        <h3><a href={`/guides/${v.id}/${a.data.slug}/`}>{a.data.title}</a></h3>
+        <p class="excerpt">{a.data.description}</p>
+        <p class="date">{a.data.pubDate.toISOString().slice(0, 10)}</p>
+      </article>
+    ))}
+  </div>
+</BaseLayout>

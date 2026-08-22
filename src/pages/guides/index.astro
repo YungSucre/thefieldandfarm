@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { VERTICALS } from "../../config";
+
+const articles = await getCollection("articles", ({ data }) => data.status === "published");
+const byVertical = Object.fromEntries(VERTICALS.map((v) => [v.id, articles.filter((a) => a.data.vertical === v.id)]));
+const total = articles.length;
+---
+
+<BaseLayout title="All Guides: The Field &amp; Farm" description="Every guide published by The Field &amp; Farm, organized by practice type: legal, dental, veterinary, chiropractic, and optometry.">
+  <nav style="font-size:0.9rem;color:var(--muted);margin-bottom:1.5rem;">
+    <a href="/">Home</a> › Guides
+  </nav>
+  <h1>All guides</h1>
+  <p class="lead">
+    {total} practical guides for gardeners and farmers, organized by practice type. New guides are added regularly.
+  </p>
+
+  {VERTICALS.map((v) => {
+    const list = byVertical[v.id] || [];
+    if (list.length === 0) return null;
+    const sorted = list.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+    return (
+      <section style="margin-bottom:2.5rem;">
+        <h2><a href={`/guides/${v.id}/`} style="text-decoration:none;">{v.name}</a> <span style="font-size:0.85rem;color:var(--muted);font-weight:400;">({list.length})</span></h2>
+        <div class="grid">
+          {sorted.map((a) => (
+            <article class="article-card">
+              <span class="tag">{a.data.verticalName}</span>
+              <h3><a href={`/guides/${v.id}/${a.data.slug}/`}>{a.data.title}</a></h3>
+              <p class="excerpt">{a.data.description}</p>
+              <p class="date">{a.data.pubDate.toISOString().slice(0, 10)}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+    );
+  })}
+</BaseLayout>

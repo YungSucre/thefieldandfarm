@@ -1,0 +1,66 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import type { CollectionEntry } from "astro:content";
+import { SITE, VERTICALS } from "../config";
+
+interface Props {
+  entry: CollectionEntry<"articles">;
+}
+const { entry } = Astro.props;
+const {
+  title,
+  description,
+  vertical,
+  slug,
+  pubDate,
+  updated,
+  status,
+  hero_image,
+  hero_alt,
+  hero_credit,
+} = entry.data;
+
+const verticalName = VERTICALS.find((v) => v.id === vertical)?.name || vertical;
+const site = SITE.url.replace(/\/$/, "");
+const path = `/guides/${vertical}/${slug}/`;
+const canonical = `${site}${path}`;
+const isDraft = status === "draft";
+const dateStr = pubDate.toISOString().slice(0, 10);
+
+const articleLd: Record<string, unknown> = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description,
+  datePublished: dateStr,
+  dateModified: updated ? updated.toISOString().slice(0, 10) : dateStr,
+  author: { "@type": "Organization", name: SITE.name },
+  publisher: { "@type": "Organization", name: SITE.name },
+  mainEntityOfPage: canonical,
+};
+
+const breadcrumbs = [{ name: verticalName, url: `/guides/${vertical}/` }];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} type="article" jsonLd={[articleLd]} breadcrumbs={breadcrumbs}>
+  <article>
+    <nav style="font-size:0.9rem;color:var(--muted);margin-bottom:1.25rem;">
+      <a href="/">Home</a> › <a href={`/guides/${vertical}/`}>{verticalName}</a> › {title}
+    </nav>
+    <h1>{title}</h1>
+    <p class="meta">
+      {dateStr}
+      {isDraft && <span style="color:#b45309;font-weight:bold;"> · DRAFT</span>}
+    </p>
+    {hero_image && (
+      <figure style="margin:0 0 1.75rem;">
+        <img src={hero_image} alt={hero_alt || title} style="width:100%;border-radius:var(--radius);" loading="eager" />
+        {hero_credit && <figcaption style="font-size:0.8rem;color:var(--muted);margin-top:0.4rem;">{hero_credit}</figcaption>}
+      </figure>
+    )}
+    <p class="lead">{description}</p>
+    <div class="content">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>
