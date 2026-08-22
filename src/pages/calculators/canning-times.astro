@@ -1,0 +1,249 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { SITE } from "../../config";
+import { CANNING, CANNING_SOURCE, CANNING_UPDATED, ALTITUDE_RULES } from "../../data/canning";
+
+const updated = "August 22, 2026";
+---
+
+<BaseLayout
+  title="Canning Times Chart (2026) — Water Bath &amp; Pressure Times by Food + Altitude"
+  description="Safe home canning times and pressures for 40+ foods: water bath and pressure canner charts with altitude adjustments, from the USDA Complete Guide to Home Canning."
+  canonical={`${SITE.url}/calculators/canning-times/`}
+>
+  <div class="calc-hero">
+    <div class="container">
+      <span class="eyebrow">Free Canning Calculator</span>
+      <h1>Canning Times Chart</h1>
+      <p class="lead">
+        Safe processing times for <strong>water bath and pressure canning</strong> —
+        pints and quarts, with automatic <strong>altitude adjustments</strong>.
+        From the USDA Complete Guide to Home Canning.
+      </p>
+      <div class="updated-badge" title="Source: USDA Complete Guide to Home Canning (NCHFP)">
+        ⚡ Updated {updated} · {CANNING_UPDATED} · free forever
+      </div>
+    </div>
+  </div>
+
+  <div class="container calc-body">
+    <section class="calc-card">
+      <h2>Your elevation</h2>
+      <div class="form-grid">
+        <label>
+          Your altitude (feet)
+          <input id="altitude" type="number" inputmode="numeric" min="0" max="8000" step="100" value="500" />
+        </label>
+        <label>
+          Filter
+          <select id="filter">
+            <option value="all">All foods</option>
+            <option value="wb">Water bath only</option>
+            <option value="pc">Pressure canner only</option>
+          </select>
+        </label>
+      </div>
+      <p class="hint" id="altNote"></p>
+    </section>
+
+    <section class="calc-card">
+      <h2>Processing times</h2>
+      <div class="table-wrap">
+        <table class="calc-table">
+          <thead>
+            <tr><th>Food</th><th>Method</th><th>Pints</th><th>Quarts</th><th>Pressure</th></tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+      <p class="note" id="tableNote"></p>
+    </section>
+  </div>
+
+  <!-- CONTENU ÉDITORIAL (SEO) -->
+  <div class="container">
+    <section class="editorial">
+      <h2>Why processing times are not optional</h2>
+      <p>
+        The time and pressure on this chart are not suggestions — they are the
+        minimums that make canned food safe to eat. Foods are processed for long enough
+        to destroy <em>Clostridium botulinum</em> spores and other pathogens at the
+        center of the jar. Under-processing by even a few minutes can leave deadly
+        bacteria alive, especially in low-acid foods (vegetables, meats, soups).
+      </p>
+      <p>
+        The rule is simple and absolute: <strong>high-acid foods</strong> (fruit,
+        tomatoes with added acid, pickles) can be safely processed in a <em>water
+        bath</em>. <strong>Low-acid foods</strong> (all vegetables, meats, poultry,
+        fish, soups) <strong>must use a pressure canner</strong> at 10-11 PSI. No
+        exceptions, no shortcuts — a water bath cannot get hot enough to kill botulism
+        spores.
+      </p>
+
+      <h2>Altitude changes the times (and pressures)</h2>
+      <p>
+        Water boils at lower temperatures at higher elevations, so processing takes
+        longer. Above 1,000 feet, add 5 minutes to water bath times per 1,000-foot
+        increase. For pressure canning, the pressure (not the time) increases at higher
+        elevations to keep the temperature high enough. This calculator applies both
+        rules automatically when you enter your altitude.
+      </p>
+
+      <h2>Pressure canner basics</h2>
+      <ul>
+        <li>Use 11 PSI at sea level to 2,000 ft; 12 PSI at 2,001-4,000 ft; 13 PSI at 4,001-6,000 ft; 14 PSI above 6,000 ft.</li>
+        <li>Let the canner vent steam for 10 minutes before closing the weight or gauge.</li>
+        <li>Start timing only once the canner reaches the target pressure.</li>
+        <li>Let the canner cool naturally — never run cold water over a pressurized canner.</li>
+        <li>Check your gauge yearly (or use a weighted-gauge canner, which does not need calibration).</li>
+      </ul>
+
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        <details>
+          <summary>Why do I need a pressure canner for vegetables but not fruit?</summary>
+          <p>
+            Botulism spores survive boiling water (212 °F / 100 °C). High-acid foods
+            (fruit, pickles, acidified tomatoes) prevent the spores from growing, so
+            water bath processing is safe. Low-acid foods (vegetables, meat) allow
+            spores to grow, so they must reach 240-250 °F inside the jar — only
+            possible under pressure.
+          </p>
+        </details>
+        <details>
+          <summary>Can I double the time to be safer?</summary>
+          <p>
+            Over-processing hurts quality (mushy vegetables, loss of flavor) but is
+            generally safe. What is NOT safe is under-processing or skipping the
+            pressure canner for low-acid foods. Use the chart times as the minimum.
+          </p>
+        </details>
+        <details>
+          <summary>Do I need to add acid to tomatoes?</summary>
+          <p>
+            Yes. Modern tomato varieties can be borderline in acidity. The USDA
+            recommends adding 2 tablespoons of bottled lemon juice (or 1/2 teaspoon
+            citric acid) per quart before processing.
+          </p>
+        </details>
+        <details>
+          <summary>What if I live above 8,000 feet?</summary>
+          <p>
+            The USDA guidance covers up to 8,000 feet. Above that, consult your local
+            extension office — pressure adjustments continue but are best confirmed
+            with a calibrated gauge and local guidance.
+          </p>
+        </details>
+        <details>
+          <summary>How do I know if a jar sealed?</summary>
+          <p>
+            After cooling 12-24 hours, press the center of each lid. A sealed lid is
+            concave and does not pop when pressed. Refrigerate any jar whose lid
+            flexes, and use it within a few days.
+          </p>
+        </details>
+      </div>
+    </section>
+  </div>
+
+  <!-- METHODOLOGY -->
+  <div class="container">
+    <section class="method">
+      <h2>Methodology &amp; sources</h2>
+      <p>
+        All times and pressures from the <strong>{CANNING_SOURCE}</strong>,
+        {CANNING_UPDATED}. Altitude adjustments per the USDA guidelines for water bath
+        (+5 min per 1,000 ft above 1,000 ft) and pressure canning (PSI increases above
+        2,000 ft).
+      </p>
+      <p class="disclaimer">
+        Food safety matters: always follow a current, tested recipe from the USDA or a
+        university extension. This chart is a reference, not a substitute for the
+        complete guide.
+      </p>
+    </section>
+  </div>
+
+  <style>
+    .calc-hero { background: linear-gradient(120deg, #1e3a2f 0%, #2c5f4a 70%, #3a7a5f 100%); color: #fff; padding: 2.2rem 0 2rem; border-radius: 14px; margin: 0 0 1.6rem; }
+    .calc-hero .container { max-width: 900px; margin: 0 auto; padding: 0 1.2rem; }
+    .calc-hero .eyebrow { display: inline-block; background: rgba(255,255,255,.14); color: #d8f3e4; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding: .3rem .7rem; border-radius: 6px; margin-bottom: .8rem; }
+    .calc-hero h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); margin: 0 0 .6rem; line-height: 1.15; }
+    .calc-hero .lead { font-size: 1.02rem; color: #e2f2e8; max-width: 680px; margin: 0 0 1rem; line-height: 1.55; }
+    .updated-badge { display: inline-block; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); color: #eafaf0; font-size: .82rem; padding: .35rem .8rem; border-radius: 8px; }
+    .calc-body { max-width: 900px; margin: 0 auto; padding: 0 1.2rem; }
+    .calc-card { background: #fff; border: 1px solid #e4e2da; border-radius: 12px; padding: 1.4rem 1.5rem; margin-bottom: 1.2rem; box-shadow: 0 1px 3px rgba(0,0,0,.05); }
+    .calc-card h2 { margin: 0 0 .9rem; font-size: 1.2rem; }
+    .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: .9rem; }
+    .form-grid label { font-size: .85rem; font-weight: 600; color: #333; }
+    .form-grid input, .form-grid select { display: block; width: 100%; margin-top: .3rem; padding: .6rem .8rem; font-size: .95rem; border: 2px solid #c9d2dc; border-radius: 8px; font-family: inherit; background: #fff; }
+    .form-grid input:focus, .form-grid select:focus { outline: none; border-color: #2c5f4a; }
+    .hint { color: #6b6a63; font-size: .85rem; margin: .6rem 0 0; }
+    .table-wrap { overflow-x: auto; }
+    .calc-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+    .calc-table th { text-align: left; background: #f0efe9; padding: .55rem .7rem; font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; color: #4a4a44; }
+    .calc-table td { padding: .5rem .7rem; border-bottom: 1px solid #ecebe4; }
+    .method-wb { display: inline-block; font-size: .72rem; font-weight: 700; padding: .15rem .5rem; border-radius: 20px; background: #e3f2e9; color: #1e6b46; }
+    .method-pc { display: inline-block; font-size: .72rem; font-weight: 700; padding: .15rem .5rem; border-radius: 20px; background: #fde8e8; color: #a33; }
+    .note { color: #55544e; font-size: .85rem; margin: .8rem 0 0; line-height: 1.5; }
+    .editorial { max-width: 900px; margin: 0 auto 2rem; padding: 0 1.2rem; }
+    .editorial h2 { font-size: 1.25rem; margin: 2rem 0 .7rem; }
+    .editorial p, .editorial li { font-size: .95rem; color: #3d3d38; line-height: 1.65; }
+    .editorial ul { padding-left: 1.3rem; }
+    .faq details { border: 1px solid #e4e2da; border-radius: 10px; padding: .8rem 1rem; margin-bottom: .6rem; background: #fff; }
+    .faq summary { font-weight: 700; cursor: pointer; color: #1e3a2f; font-size: .95rem; }
+    .faq details p { margin: .6rem 0 0; font-size: .9rem; color: #55544e; line-height: 1.6; }
+    .method { max-width: 900px; margin: 0 auto 2rem; padding: 0 1.2rem; }
+    .method p { font-size: .92rem; color: #3d3d38; line-height: 1.6; }
+    .disclaimer { font-size: .82rem; color: #7a7870; font-style: italic; }
+  </style>
+
+  <script>
+    import { CANNING, ALTITUDE_RULES } from "../../data/canning";
+    const $ = (id: string) => document.getElementById(id)!;
+
+    function render() {
+      const alt = parseFloat($("altitude").value) || 0;
+      const filter = $("filter").value;
+      // règles altitude
+      let wbAdd = 0, pcPsi = 11;
+      for (const r of ALTITUDE_RULES.wb) if (alt >= r.min) wbAdd = r.add;
+      for (const r of ALTITUDE_RULES.pc) if (alt >= r.min) pcPsi = r.psi;
+      $("altNote").textContent = `At ${alt.toLocaleString()} ft: add ${wbAdd} min to water bath times · pressure canner at ${pcPsi} PSI.`;
+      const body = $("tableBody");
+      body.innerHTML = "";
+      for (const item of CANNING) {
+        if (filter !== "all" && item.method !== filter) continue;
+        const isWb = item.method === "wb";
+        const pt = item.minutesPt + (isWb ? wbAdd : 0);
+        const qt = item.minutesQt + (isWb ? wbAdd : 0);
+        body.insertAdjacentHTML("beforeend", `
+          <tr>
+            <td>${item.name}${item.note ? `<br><small style="color:#8a887e">${item.note}</small>` : ""}</td>
+            <td><span class="method-${item.method}">${isWb ? "Water bath" : "Pressure"}</span></td>
+            <td>${pt} min</td>
+            <td>${qt} min</td>
+            <td>${isWb ? "—" : `${pcPsi} PSI`}</td>
+          </tr>`);
+      }
+      $("tableNote").textContent = `Water bath times adjusted for ${alt.toLocaleString()} ft altitude. Pressure canner PSI adjusted per USDA rules.`;
+    }
+
+    $("altitude").addEventListener("input", render);
+    $("filter").addEventListener("change", render);
+    render();
+  </script>
+
+  <!-- JSON-LD FAQPage -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Why do I need a pressure canner for vegetables but not fruit?", "acceptedAnswer": { "@type": "Answer", "text": "Botulism spores survive boiling water. High-acid foods (fruit, pickles, acidified tomatoes) prevent spore growth, so water bath is safe. Low-acid foods (vegetables, meat) must reach 240-250 °F inside the jar, which only a pressure canner achieves." } },
+      { "@type": "Question", "name": "Can I double the time to be safer?", "acceptedAnswer": { "@type": "Answer", "text": "Over-processing hurts quality but is generally safe. Under-processing or skipping the pressure canner for low-acid foods is not safe. Use the chart times as the minimum." } },
+      { "@type": "Question", "name": "Do I need to add acid to tomatoes?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The USDA recommends adding 2 tablespoons of bottled lemon juice (or 1/2 teaspoon citric acid) per quart before processing." } },
+      { "@type": "Question", "name": "What if I live above 8,000 feet?", "acceptedAnswer": { "@type": "Answer", "text": "USDA guidance covers up to 8,000 feet. Above that, consult your local extension office for pressure adjustments." } },
+      { "@type": "Question", "name": "How do I know if a jar sealed?", "acceptedAnswer": { "@type": "Answer", "text": "After cooling 12-24 hours, press the center of each lid. A sealed lid is concave and does not pop. Refrigerate any jar whose lid flexes and use it within days." } }
+    ]
+  })} />
+</BaseLayout>
