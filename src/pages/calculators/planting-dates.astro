@@ -9,8 +9,8 @@ const dataSource = "NOAA 1991-2020 climate normals via open-meteo archive";
 ---
 
 <BaseLayout
-  title={`Planting Dates Calculator by ZIP Code — ${SITE.name}`}
-  description="Enter your ZIP code to get your last and first frost dates (10/50/90% probability) and a personalized vegetable planting calendar based on 30 years of NOAA climate data."
+  title="Planting Dates by ZIP Code (2026) — Last &amp; First Frost Dates + Vegetable Calendar"
+  description="Enter any US ZIP code to get your last spring frost date, first fall frost date, and a personalized vegetable planting calendar — computed from 30 years of NOAA climate data (1991-2020) with 10/50/90% probability ranges."
   canonical={`${SITE.url}/calculators/planting-dates/`}
 >
   <div class="calc-hero">
@@ -121,6 +121,150 @@ const dataSource = "NOAA 1991-2020 climate normals via open-meteo archive";
     </section>
   </div>
 
+  <!-- CONTENU ÉDITORIAL (SEO) -->
+  <div class="container">
+    <section class="editorial">
+      <h2>How to use the planting dates calculator</h2>
+      <p>
+        Type any US ZIP code above and press <em>Get my dates</em>. The calculator
+        converts your ZIP to its exact coordinates, pulls 30 years of daily minimum
+        temperatures (1991–2020 NOAA data) for that location, and computes three things:
+        your <strong>last spring frost</strong>, your <strong>first fall frost</strong>,
+        and a <strong>planting calendar for 37 vegetables</strong> timed to your climate.
+      </p>
+      <p>
+        You do not need to create an account, enter an email, or pay anything. The tool
+        is free, and the climate data behind it comes from the same NOAA records that
+        university extension services use.
+      </p>
+
+      <h2>Why frost dates matter more than a zone number</h2>
+      <p>
+        The USDA hardiness zone tells you which <em>perennial</em> plants survive your
+        coldest winter — it was designed for trees and shrubs. For <em>annual</em>
+        vegetables, what actually decides success is the length of your frost-free
+        season and the date your last spring frost falls. A gardener in zone 7b in
+        coastal North Carolina and one in zone 7b in New Mexico have very different
+        planting windows.
+      </p>
+      <p>
+        This calculator gives you the dates directly, computed from 30 years of observed
+        temperatures at the coordinates of your ZIP — not a general zone average.
+      </p>
+
+      <h2>Reading the probabilities: 10%, 50%, and 90%</h2>
+      <p>
+        Frost does not arrive on a schedule. Over 30 years of records, the last spring
+        frost in one city might fall on March 20 one year and April 25 the next. Instead
+        of guessing one date, we show three:
+      </p>
+      <ul>
+        <li>
+          <strong>10%:</strong> the date by which frost has ended in only 3 of 30 years.
+          Planting tender crops this early is a gamble.
+        </li>
+        <li>
+          <strong>50% (median):</strong> the midpoint — half of the years the last frost
+          is earlier, half later. Good for semi-hardy crops with some frost tolerance.
+        </li>
+        <li>
+          <strong>90%:</strong> in 27 of 30 years, frost is over by this date. This is
+          the "safe" date for tomatoes, peppers, squash, and other frost-tender crops.
+        </li>
+      </ul>
+      <p>
+        The calendar uses these rules: tender crops go in after the 90% date,
+        semi-hardy crops after the 50% date, and hardy crops can be sown about four
+        weeks before it.
+      </p>
+
+      <h2>What to plant when: a quick reference by frost tolerance</h2>
+      <p>
+        The full 37-vegetable table updates automatically with your ZIP. Here is the
+        general pattern:
+      </p>
+      <table class="ref-table">
+        <thead>
+          <tr>
+            <th>Tolerance</th>
+            <th>Examples</th>
+            <th>Plant after</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hardy</td>
+            <td>Beets, carrots, kale, peas, spinach, turnips</td>
+            <td>4 weeks before the 50% last frost</td>
+          </tr>
+          <tr>
+            <td>Semi-hardy</td>
+            <td>Lettuce, broccoli, cabbage, cauliflower</td>
+            <td>50% last frost date</td>
+          </tr>
+          <tr>
+            <td>Tender</td>
+            <td>Tomatoes, peppers, eggplant, squash, cucumbers, beans, corn</td>
+            <td>90% last frost date</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Crops with long days to maturity (parsnips, sweet potatoes, winter squash,
+        Brussels sprouts) need an early start or a shorter-season variety where the
+        growing season is short — the calendar flags these as "Tight."
+      </p>
+
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        <details>
+          <summary>How accurate are these planting dates?</summary>
+          <p>
+            The frost dates are computed from 30 years of observed daily minimum
+            temperatures (NOAA 1991–2020 normals) at your ZIP's coordinates — the same
+            source university extension services use. Percentiles describe real
+            year-to-year variation. Local microclimate (elevation, proximity to water,
+            urban heat) can shift dates by a week or two in either direction.
+          </p>
+        </details>
+        <details>
+          <summary>What counts as a frost in this calculator?</summary>
+          <p>
+            A frost event is any day with a minimum temperature at or below 32 °F (0 °C).
+            We scan all 30 years of daily minima, find the last spring frost and first
+            fall frost for each year, and report the 10th, 50th, and 90th percentiles.
+          </p>
+        </details>
+        <details>
+          <summary>Why is my growing season different from the zone map?</summary>
+          <p>
+            Hardiness zones measure average annual extreme minimum temperature — a
+            winter statistic. The growing season measures the frost-free window between
+            spring and fall frosts. Two cities in the same zone can have seasons that
+            differ by weeks, which is why this calculator uses your actual location data.
+          </p>
+        </details>
+        <details>
+          <summary>Do these dates work for container gardening?</summary>
+          <p>
+            Yes — frost dates apply the same way to containers, with two caveats:
+            containers freeze faster than in-ground beds (protect roots earlier), and
+            they warm up faster in spring, so tender crops can often go out a few days
+            earlier if a frost is not forecast.
+          </p>
+        </details>
+        <details>
+          <summary>What if I live where it never freezes?</summary>
+          <p>
+            For ZIPs with no frost events in 30 years of records (south Florida, coastal
+            California, Hawaii), the calculator reports a year-round growing season and
+            shifts the calendar to "plant any time" for most crops.
+          </p>
+        </details>
+      </div>
+    </section>
+  </div>
+
   <!-- METHODOLOGY -->
   <div class="container">
     <section class="method">
@@ -221,6 +365,16 @@ const dataSource = "NOAA 1991-2020 climate normals via open-meteo archive";
     }
     @keyframes spin { to { transform: rotate(360deg); } }
     .method { max-width: 860px; margin: 0 auto 2rem; padding: 0 1.2rem; }
+    .editorial { max-width: 860px; margin: 0 auto 2rem; padding: 0 1.2rem; }
+    .editorial h2 { font-size: 1.25rem; margin: 2rem 0 .7rem; }
+    .editorial p, .editorial li { font-size: .95rem; color: #3d3d38; line-height: 1.65; }
+    .editorial ul { padding-left: 1.3rem; }
+    .ref-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .92rem; }
+    .ref-table th { text-align: left; background: #f0efe9; padding: .55rem .7rem; font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; color: #4a4a44; }
+    .ref-table td { padding: .55rem .7rem; border-bottom: 1px solid #ecebe4; }
+    .faq details { border: 1px solid #e4e2da; border-radius: 10px; padding: .8rem 1rem; margin-bottom: .6rem; background: #fff; }
+    .faq summary { font-weight: 700; cursor: pointer; color: #1e3a2f; font-size: .95rem; }
+    .faq details p { margin: .6rem 0 0; font-size: .9rem; color: #55544e; line-height: 1.6; }
     .method h2 { font-size: 1.2rem; }
     .method p, .method li { font-size: .92rem; color: #3d3d38; line-height: 1.6; }
     .disclaimer { font-size: .82rem; color: #7a7870; font-style: italic; }
@@ -333,4 +487,36 @@ const dataSource = "NOAA 1991-2020 climate normals via open-meteo archive";
       return base.toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
     }
   </script>
+  <!-- JSON-LD FAQPage -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How accurate are these planting dates?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The frost dates are computed from 30 years of observed daily minimum temperatures (NOAA 1991-2020 normals) at your ZIP's coordinates — the same source university extension services use. Percentiles describe real year-to-year variation. Local microclimate can shift dates by a week or two." }
+      },
+      {
+        "@type": "Question",
+        "name": "What counts as a frost in this calculator?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A frost event is any day with a minimum temperature at or below 32 °F (0 °C). We scan all 30 years of daily minima, find the last spring frost and first fall frost for each year, and report the 10th, 50th, and 90th percentiles." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is my growing season different from the zone map?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Hardiness zones measure average annual extreme minimum temperature — a winter statistic. The growing season measures the frost-free window between spring and fall frosts. Two cities in the same zone can have seasons that differ by weeks." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do these dates work for container gardening?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes — frost dates apply the same way to containers, with two caveats: containers freeze faster than in-ground beds, and they warm up faster in spring, so tender crops can often go out a few days earlier if no frost is forecast." }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I live where it never freezes?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For ZIPs with no frost events in 30 years of records (south Florida, coastal California, Hawaii), the calculator reports a year-round growing season and shifts the calendar to plant any time for most crops." }
+      }
+    ]
+  })} />
 </BaseLayout>
