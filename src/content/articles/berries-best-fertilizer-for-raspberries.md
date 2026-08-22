@@ -84,3 +84,10 @@ A blend like Espoma Berry-tone or Dr. Earth Organic Berry Food works well. They 
 ## The Bottom Line
 
 For most raspberry patches, a balanced 10-10-10 fertilizer applied in early spring at 1 to 2 pounds per 100 feet of row is the simplest, most cost-effective choice. If you prefer organic, use a berry-specific granular blend or a combination of blood meal, bone meal, and kelp meal. Always water in fertilizer and avoid overdoing nitrogen. With proper feeding, your raspberries will reward you with healthy canes and a bountiful harvest.
+
+
+## Related guides
+
+- [Best fertilizer for gooseberries](/guides/berries/best-fertilizer-for-gooseberries/)
+- [Best soil for gooseberries](/guides/berries/best-soil-for-gooseberries/)
+- [How to Grow Strawberries: Planting, Care, and Harvest](/guides/berries/how-to-grow-strawberries/)

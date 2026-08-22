@@ -73,6 +73,12 @@ Use a balanced fertilizer like 10-10-10 before planting, then side-dress with co
 
 Yes, but amend heavily with compost and consider raised beds. Clay soil needs organic matter to improve drainage and aeration.
 
+
+## Related guides
+
+- [Best way to cook kohlrabi](/guides/brassicas/best-way-to-cook-kohlrabi/)
+- [Best ways to cook brussels sprouts](/guides/brassicas/best-ways-to-cook-brussels-sprouts/)
+
 ## The bottom line
 
 Kohlrabi thrives in loose, fertile, well-drained soil with a pH of 6.0-7.0. Test your soil, amend with compost, and ensure good drainage. For the best results, use raised beds or containers with a quality mix. With proper soil, you will harvest crisp, tender bulbs in about 45-60 days. Start by testing your soil this week, then amend and plant according to your zone.

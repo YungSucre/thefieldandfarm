@@ -142,3 +142,9 @@ Most hens live 5 to 8 years, though some can reach 10+. Egg production declines 
 
 ## The Bottom Line
 Starting a backyard flock is achievable for any beginner with proper planning. Check local laws, choose a hardy breed, invest in a predator-proof coop, and commit to a daily routine. Expect startup costs of $500 to $1,500 and ongoing feed costs of about $20 per month. With a little effort, you'll enjoy fresh eggs and the satisfaction of raising your own food. Take the first step this week: research your local regulations and sketch a coop plan.
+
+
+## Related guides
+
+- [Best backyard chickens for beginners](/guides/chickens/best-backyard-chickens-for-beginners/)
+- [Best breed of chicken for beginners](/guides/chickens/best-breed-of-chicken-for-beginners/)

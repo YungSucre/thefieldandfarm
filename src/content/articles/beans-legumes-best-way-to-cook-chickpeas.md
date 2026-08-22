@@ -79,5 +79,11 @@ Yes, but expect longer times and a slightly different texture. In a pressure coo
 **How do I know when chickpeas are done?**
 Taste one. It should be creamy, not chalky or crunchy. The skin should not be tough. If you are making hummus, they should mash easily.
 
+
+## Related guides
+
+- [Best way to cook fava beans](/guides/beans-legumes/best-way-to-cook-fava-beans/)
+- [Best fertilizer for pole beans](/guides/beans-legumes/best-fertilizer-for-pole-beans/)
+
 ## The bottom line
 Cooking chickpeas from scratch is simple, economical, and gives you better flavor than canned. Soak overnight, simmer for 1.5 to 2 hours, and season to your liking. For busy days, a pressure cooker cuts the time to 35 minutes. Start with a pound of dry chickpeas this week, and you will have a versatile staple for salads, soups, and dips. Your taste buds and wallet will thank you.

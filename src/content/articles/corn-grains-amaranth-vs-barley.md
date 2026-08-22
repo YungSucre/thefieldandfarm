@@ -103,6 +103,12 @@ Amaranth has about 14% protein, while barley has about 12%. Amaranth also has mo
 
 Yes, in many areas. Plant barley in early spring, harvest in early summer, then plant amaranth in the same bed for a fall harvest. This works in zones 5 to 8, where you have enough warm days left.
 
+
+## Related guides
+
+- [Amaranth vs amaranthus](/guides/corn-grains/amaranth-vs-amaranthus/)
+- [Amaranth vs buckwheat](/guides/corn-grains/amaranth-vs-buckwheat/)
+
 ## The bottom line
 
 Barley is a reliable cool-season grain with gluten, but it requires hulling. Amaranth is a heat-loving, gluten-free pseudo-grain that is easier to process. Choose based on your climate and how you plan to use the grain. Start small, maybe a 10x10 foot bed, and see which one fits your rotation. Both are worth growing, and you can even grow both in one season if you time it right.

@@ -92,6 +92,12 @@ Yes, especially in the first 2-3 years. Dwarf rootstocks have shallow root syste
 
 Apple on M27 rootstock is the smallest, reaching only 4-6 feet. For citrus, 'Flying Dragon' rootstock keeps oranges and lemons to 6-8 feet. If you want a true patio tree, consider a 'Fig' in a container, which stays under 5 feet.
 
+
+## Related guides
+
+- [Best fertilizer for orange trees](/guides/citrus/best-fertilizer-for-orange-trees/)
+- [Best soil for orange trees in pots](/guides/citrus/best-soil-for-orange-trees-in-pots/)
+
 ## The bottom line
 
 Dwarf fruit trees are a practical choice for small spaces, but they are not tiny. Expect 6-10 feet in height and 4-8 feet in spread, depending on rootstock and pruning. Choose the right rootstock, plant with proper spacing, and prune annually to keep your tree productive and manageable. With realistic expectations, you can enjoy homegrown fruit without a ladder.

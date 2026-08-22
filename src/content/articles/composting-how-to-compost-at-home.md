@@ -88,3 +88,10 @@ A: Yes, in moderation. They add acidity but break down fine. Avoid large amounts
 ## The Bottom Line
 
 Home composting is a low-cost, high-reward practice. Start with a simple bin, balance greens and browns, keep the pile moist and aerated, and you'll have finished compost in a few months. It reduces landfill waste and improves your soil naturally. Begin this week by collecting kitchen scraps and dry leaves, and build your first pile. With consistent care, you'll see results by the next growing season.
+
+
+## Related guides
+
+- [Backyard composting for beginners](/guides/composting/backyard-composting-for-beginners/)
+- [Best compost bin australia](/guides/composting/best-compost-bin-australia/)
+- [Best compost](/guides/composting/best-compost/)

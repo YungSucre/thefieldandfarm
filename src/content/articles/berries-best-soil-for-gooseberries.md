@@ -112,3 +112,10 @@ Only if you also add organic matter. Sand alone can make clay harder and worse. 
 ## The Bottom Line
 
 The best soil for gooseberries is well-drained loam with a pH of 6.0 to 6.5 and plenty of organic matter. Test your soil before planting, amend it with compost, and choose a spot with good drainage and sun. If you start with the right soil, gooseberries are easy to grow and will reward you with tart, flavorful berries for years. Fix your soil first, and the bushes will do the rest.
+
+
+## Related guides
+
+- [Best fertilizer for gooseberries](/guides/berries/best-fertilizer-for-gooseberries/)
+- [Best fertilizer for raspberries](/guides/berries/best-fertilizer-for-raspberries/)
+- [How to Grow Strawberries: Planting, Care, and Harvest](/guides/berries/how-to-grow-strawberries/)

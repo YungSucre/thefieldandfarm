@@ -2,6 +2,7 @@
 import BaseLayout from "./BaseLayout.astro";
 import type { CollectionEntry } from "astro:content";
 import { SITE, VERTICALS } from "../config";
+import { ENTITIES } from "../data/entities";
 
 interface Props {
   entry: CollectionEntry<"articles">;
@@ -39,10 +40,23 @@ const articleLd: Record<string, unknown> = {
   mainEntityOfPage: canonical,
 };
 
+// Entity optimization : match titre + vertical contre les entités Wikidata (max 3)
+const haystack = (title + " " + verticalName).toLowerCase();
+const matched: { name: string; wikidata: string }[] = [];
+for (const e of ENTITIES) {
+  if (e.keywords.some((k) => haystack.includes(k))) {
+    matched.push({ name: e.name, wikidata: e.wikidata });
+    if (matched.length >= 3) break;
+  }
+}
+if (matched.length > 0) {
+  articleLd.about = matched.map((m) => ({ "@type": "Thing", name: m.name, sameAs: `https://www.wikidata.org/wiki/${m.wikidata}` }));
+}
+
 const breadcrumbs = [{ name: verticalName, url: `/guides/${vertical}/` }];
 ---
 
-<BaseLayout title={title} description={description} canonical={canonical} type="article" jsonLd={[articleLd]} breadcrumbs={breadcrumbs}>
+<BaseLayout title={title} description={description} canonical={canonical} type="Article" jsonLd={[articleLd]} breadcrumbs={breadcrumbs}>
   <article>
     <nav style="font-size:0.9rem;color:var(--muted);margin-bottom:1.25rem;">
       <a href="/">Home</a> › <a href={`/guides/${vertical}/`}>{verticalName}</a> › {title}

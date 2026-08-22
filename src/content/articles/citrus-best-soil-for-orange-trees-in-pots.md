@@ -77,3 +77,9 @@ Yellow leaves often indicate overwatering, nutrient deficiency (especially nitro
 ## The Bottom Line
 
 For healthy potted orange trees, use a well-draining, slightly acidic mix with perlite and compost, in a pot with good drainage. Water correctly, fertilize regularly, and repot every few years. With the right soil and care, your container orange tree can thrive and produce sweet fruit for years. Start with the simple recipe above, and adjust based on your climate and tree's response.
+
+
+## Related guides
+
+- [Best fertilizer for orange trees](/guides/citrus/best-fertilizer-for-orange-trees/)
+- [How big do dwarf fruit trees grow](/guides/citrus/how-big-do-dwarf-fruit-trees-grow/)

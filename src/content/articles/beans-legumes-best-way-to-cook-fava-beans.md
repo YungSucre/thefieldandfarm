@@ -79,5 +79,11 @@ After blanching, they should be tender but still have a slight bite. When sauté
 ### What goes well with fava beans?
 Fava beans pair with olive oil, garlic, lemon, mint, parsley, pecorino cheese, and pancetta. They work in pastas, risottos, salads, and as a spread on bread. In Italian cuisine, they're often served with pecorino and olive oil.
 
+
+## Related guides
+
+- [Best fertilizer for pole beans](/guides/beans-legumes/best-fertilizer-for-pole-beans/)
+- [Best way to cook chickpeas](/guides/beans-legumes/best-way-to-cook-chickpeas/)
+
 ## The bottom line
 The best way to cook fava beans is to blanch them in salted water for 2 to 3 minutes, shock in ice water, peel off the skins, and sauté with garlic and olive oil. This method takes about 20 minutes from start to finish and yields tender, sweet beans that are versatile and delicious. For gardeners, choose thin-skinned varieties like Sweet Lorane or Vroma for easier peeling. If you're short on time, roasting with the skins on is a decent alternative, but for the full fava experience, peeling is worth the effort. Now go harvest those pods and get cooking.

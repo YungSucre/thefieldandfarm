@@ -94,6 +94,13 @@ No. A healthy mix of greens and browns is enough. Commercial activators are most
 
 Try a worm bin (vermicomposting) indoors or on a balcony. A 10-gallon bin with red wiggler worms can process about 1 pound of scraps per week. Worms and bin kits cost $30 to $60.
 
+
+## Related guides
+
+- [How to Compost at Home: A Beginner's Guide to Composting](/guides/composting/how-to-compost-at-home/)
+- [Best compost bin australia](/guides/composting/best-compost-bin-australia/)
+- [Best compost](/guides/composting/best-compost/)
+
 ## The bottom line
 
 Backyard composting is a low-cost, high-reward habit that any gardener can start this weekend. Choose a bin that fits your space, keep the greens and browns balanced, keep it moist and aerated, and you will have rich compost in a few months. Start small, learn as you go, and do not stress about perfection. Your garden will thank you.

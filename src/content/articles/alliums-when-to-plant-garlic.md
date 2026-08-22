@@ -79,3 +79,10 @@ If the ground is frozen, you can still plant in early spring, but expect smaller
 ## The Bottom Line
 
 Plant garlic 4 to 6 weeks before your first hard frost, when soil temps are 50-60°F. Prepare soil with compost and fertilizer, choose the right variety for your zone, and plant cloves 2-4 inches deep with 6-8 inches spacing. Mulch well, water in fall, and fertilize in spring. With proper timing and care, you'll harvest large, flavorful bulbs that store for months. Start now: order seed garlic, prepare your bed, and mark your calendar.
+
+
+## Related guides
+
+- [Best fertilizer for shallots](/guides/alliums/best-fertilizer-for-shallots/)
+- [Best soil for leeks](/guides/alliums/best-soil-for-leeks/)
+- [Best way to cook leeks](/guides/alliums/best-way-to-cook-leeks/)

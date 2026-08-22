@@ -88,3 +88,9 @@ You do not need special tools. A basic set includes a trowel ($10 to $15), a han
 ## The Bottom Line
 
 Companion planting is a practical, low-cost way to improve garden health, but it requires planning. Choose proven pairs, space them correctly, and plant at the right time for your zone. Start with one or two combinations, like tomatoes with basil and marigolds, and expand as you learn. Keep records of what works, and adjust each season. With realistic expectations and consistent care, you will see fewer pests and better yields, without the need for heavy chemicals.
+
+
+## Related guides
+
+- [Companion planting for beginners](/guides/companion-planting/companion-planting-for-beginners/)
+- [How to do companion gardening for beginners](/guides/companion-planting/how-to-do-companion-gardening-for-beginners/)

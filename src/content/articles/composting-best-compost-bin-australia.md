@@ -106,3 +106,10 @@ Smells come from too many greens or too much moisture. Add more browns (dry leav
 ## The Bottom Line
 
 The best compost bin for Australia in 2026 is the one that fits your space and lifestyle. For most gardeners, a three-bay system is the gold standard because it's versatile and produces high-quality compost. If you're short on space, a tumbler is a close second. And if you're in an apartment, a worm farm is your best bet. Whatever you choose, start with the right location, balance your greens and browns, and be patient. Composting is not instant, but it's one of the most rewarding things you can do for your garden and the environment.
+
+
+## Related guides
+
+- [Best compost](/guides/composting/best-compost/)
+- [How to Compost at Home: A Beginner's Guide to Composting](/guides/composting/how-to-compost-at-home/)
+- [Backyard composting for beginners](/guides/composting/backyard-composting-for-beginners/)

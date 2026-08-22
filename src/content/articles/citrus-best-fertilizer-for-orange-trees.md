@@ -87,3 +87,9 @@ A: In most zones, skip fall fertilization (October-November) to avoid stimulatin
 ## The Bottom Line
 
 The best fertilizer for orange trees is a balanced citrus formula with an NPK ratio around 3-1-1 or 2-1-1, applied three times a year. Choose organic options like Espoma Citrus-tone or Jobe's Organics for slow, safe feeding. Test your soil first, adjust pH if needed, and always water after applying. Avoid over-fertilizing and feeding in winter. With consistent care, your orange tree will reward you with healthy growth and juicy fruit. Start with a soil test this week, then mark your calendar for the next feeding window.
+
+
+## Related guides
+
+- [Best soil for orange trees in pots](/guides/citrus/best-soil-for-orange-trees-in-pots/)
+- [How big do dwarf fruit trees grow](/guides/citrus/how-big-do-dwarf-fruit-trees-grow/)

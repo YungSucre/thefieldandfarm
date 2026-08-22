@@ -83,5 +83,12 @@ Yellow leaves can mean nitrogen deficiency, but also overwatering or pH issues. 
 **Should I fertilize newly planted gooseberries?**
 No. Mix compost into the planting hole, but do not add granular fertilizer for the first year. The roots are sensitive, and compost provides enough nutrients.
 
+
+## Related guides
+
+- [Best fertilizer for raspberries](/guides/berries/best-fertilizer-for-raspberries/)
+- [Best soil for gooseberries](/guides/berries/best-soil-for-gooseberries/)
+- [How to Grow Strawberries: Planting, Care, and Harvest](/guides/berries/how-to-grow-strawberries/)
+
 ## The bottom line
 For most gooseberry bushes, a balanced 10-10-10 or 5-10-10 fertilizer applied in early spring and after harvest is all you need. Start with a soil test, use compost for long-term health, and never overfeed. With the right timing and amounts, you will get 5 to 10 pounds of berries per mature bush, which is plenty for pies, jams, and fresh eating. Keep it simple, and the bushes will reward you for years.

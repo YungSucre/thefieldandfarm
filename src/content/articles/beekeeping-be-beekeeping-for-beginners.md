@@ -91,3 +91,9 @@ If you have a known allergy, consult an allergist first. Many beekeepers with mi
 ## The Bottom Line
 
 Beekeeping is a rewarding hobby that supports your garden and provides honey, but it requires a real commitment of time and money. Start with one Langstroth hive, a nuc of bees, and quality protective gear. Follow the seasonal care calendar, stay on top of mite control, and be patient: your first harvest may be small, but the learning is invaluable. Join a local beekeeping club for mentorship, and you will be set for success.
+
+
+## Related guides
+
+- [Beehive for beginners](/guides/beekeeping/beehive-for-beginners/)
+- [Bee hive vs wasp nest](/guides/beekeeping/bee-hive-vs-wasp-nest/)

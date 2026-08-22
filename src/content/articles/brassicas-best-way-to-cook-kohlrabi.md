@@ -64,6 +64,12 @@ All kohlrabi varieties cook similarly, but some are sweeter and more tender raw.
 
 **Can you freeze cooked kohlrabi?** Yes, but it will be softer after thawing. Roast or sauté first, then freeze in airtight containers for up to 3 months.
 
+
+## Related guides
+
+- [Best soil for kohlrabi](/guides/brassicas/best-soil-for-kohlrabi/)
+- [Best ways to cook brussels sprouts](/guides/brassicas/best-ways-to-cook-brussels-sprouts/)
+
 ## The bottom line
 
 Roasting is the best way to cook kohlrabi: it's simple, brings out sweetness, and works with many seasonings. For a quick meal, sauté it; for a fresh crunch, eat it raw. Always peel, cut evenly, and don't overcook. With these methods, you'll enjoy your kohlrabi from garden to table without waste.

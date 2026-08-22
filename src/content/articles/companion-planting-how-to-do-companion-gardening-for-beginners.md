@@ -97,6 +97,12 @@ Marigolds with tomatoes, basil with peppers, and radishes with carrots. These ar
 **How do I know if a pairing is safe?**
 Stick to well-documented combinations from reputable sources like university extension guides. Avoid mixing plants from the same family too closely, as they share pests.
 
+
+## Related guides
+
+- [Companion planting for beginners](/guides/companion-planting/companion-planting-for-beginners/)
+- [How to plant companion plants](/guides/companion-planting/how-to-plant-companion-plants/)
+
 ## The bottom line
 
 Companion planting is a simple, low-cost way to make your garden more productive and resilient. Start with one or two proven pairings, keep a garden journal to note what works, and expand from there. It is not a cure-all, but it is a satisfying step toward smarter gardening.

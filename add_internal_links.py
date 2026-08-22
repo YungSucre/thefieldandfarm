@@ -6,7 +6,7 @@ Le pattern du grimoire : liens internes = maillage SEO obligatoire.
 import os, re, json
 from pathlib import Path
 
-ROOT = Path("/root/practiceownerpro")
+ROOT = Path("/root/thefieldandfarm")
 CONTENT = ROOT / "src" / "content" / "articles"
 
 def load_articles():

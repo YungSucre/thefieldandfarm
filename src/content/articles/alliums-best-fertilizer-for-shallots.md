@@ -78,3 +78,10 @@ Yes, if your compost is rich and you apply 2-3 inches before planting. However, 
 ## The Bottom Line
 
 For healthy shallots, use a balanced fertilizer like 10-10-10 at planting and a phosphorus-potassium boost when bulbs form. Organic options like compost and bone meal work well, but avoid high nitrogen. Test your soil, follow the schedule for your zone, and you'll get a good harvest. Remember, shallots are forgiving, but they reward attention to nutrient balance.
+
+
+## Related guides
+
+- [Best soil for leeks](/guides/alliums/best-soil-for-leeks/)
+- [Best way to cook leeks](/guides/alliums/best-way-to-cook-leeks/)
+- [When to Plant Garlic: Timing and Tips for a Big Harvest](/guides/alliums/when-to-plant-garlic/)

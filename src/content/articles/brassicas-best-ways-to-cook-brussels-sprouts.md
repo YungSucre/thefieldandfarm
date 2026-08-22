@@ -88,6 +88,12 @@ Fresh Brussels sprouts keep for up to a week in the fridge in a plastic bag. Do 
 
 **Can I use frozen Brussels sprouts?** Yes, but they will be softer. Roast them at 425°F for 25 to 30 minutes, and do not thaw first. They will not get as crispy as fresh, but they are fine for soups or casseroles.
 
+
+## Related guides
+
+- [Best way to cook kohlrabi](/guides/brassicas/best-way-to-cook-kohlrabi/)
+- [Best soil for kohlrabi](/guides/brassicas/best-soil-for-kohlrabi/)
+
 ## The bottom line
 
 Roasting, sautéing, and air frying are the best ways to cook Brussels sprouts. They all use high heat to bring out sweetness and avoid mushiness. Pick one method tonight, use fresh sprouts, and do not crowd the pan. Your garden harvest deserves better than a boil. Try the roasting method first: it is the most forgiving and the most delicious.

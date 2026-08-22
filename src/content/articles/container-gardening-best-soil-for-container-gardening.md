@@ -92,3 +92,9 @@ A: Yes, homemade compost is excellent. Just ensure it's fully decomposed and scr
 ## The Bottom Line
 
 The best soil for container gardening is a high-quality potting mix that drains well and holds nutrients. Whether you buy a commercial mix or blend your own, focus on aeration and moisture balance. Avoid garden soil, refresh your mix annually, and feed regularly. With the right soil, your containers will thrive. Start with a reliable mix like FoxFarm or Pro-Mix, and adjust as you learn what works for your plants and climate.
+
+
+## Related guides
+
+- [Best soil for container gardening vegetables](/guides/container-gardening/best-soil-for-container-gardening-vegetables/)
+- [Best soil for container herbs](/guides/container-gardening/best-soil-for-container-herbs/)

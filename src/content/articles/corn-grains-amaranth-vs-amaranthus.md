@@ -72,6 +72,12 @@ For greens, about 30 to 40 days from seed to first harvest. For grain, 90 to 120
 **Can I grow amaranth in containers?**
 Yes, but choose a leafy variety and use a pot at least 12 inches deep. Grain types need too much space for containers.
 
+
+## Related guides
+
+- [Amaranth vs barley](/guides/corn-grains/amaranth-vs-barley/)
+- [Amaranth vs buckwheat](/guides/corn-grains/amaranth-vs-buckwheat/)
+
 ## The bottom line
 
 Amaranth and amaranthus are the same plant, so do not get hung up on the name. Choose a grain variety if you want seeds, or a leafy type for greens. Plant after the last frost, keep weeds down, and harvest at the right time. With minimal effort, you will have a nutritious crop that thrives in summer heat. Start with a small patch this year, and you will likely add more next season.

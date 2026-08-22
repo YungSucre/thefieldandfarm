@@ -89,6 +89,12 @@ Most hens will lay well for 2 to 3 years, then production declines. They can liv
 
 No, hens lay eggs without a rooster. A rooster is only needed if you want fertilized eggs for hatching. If you do not want chicks, you can keep only hens, which also avoids noise and aggression issues.
 
+
+## Related guides
+
+- [Backyard Chickens for Beginners: What You Need to Get Started](/guides/chickens/backyard-chickens-for-beginners/)
+- [Best backyard chickens for beginners](/guides/chickens/best-backyard-chickens-for-beginners/)
+
 ## The bottom line
 
 The best breed for you depends on your priorities, but for most beginners, the Buff Orpington or Rhode Island Red are excellent choices. They are friendly, hardy, and reliable layers. Start with 3 to 5 chicks, set up a safe coop, and you will be collecting fresh eggs in about 5 to 6 months. Do your research, order early, and enjoy the journey.

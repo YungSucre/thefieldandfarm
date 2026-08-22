@@ -108,6 +108,12 @@ Marigolds (French or African) repel nematodes and whiteflies. Nasturtiums attrac
 
 Use a reliable chart from a university extension service, not just any internet list. The Old Farmer's Almanac and local extension offices publish tested charts.
 
+
+## Related guides
+
+- [How to do companion gardening for beginners](/guides/companion-planting/how-to-do-companion-gardening-for-beginners/)
+- [How to plant companion plants](/guides/companion-planting/how-to-plant-companion-plants/)
+
 ## The bottom line
 
 Companion planting is a simple, low-cost way to improve your garden's health and productivity. Start with a few proven pairs, keep records, and adjust as you learn. You will not eliminate all pests, but you will reduce damage and make your garden more resilient. Give it a season, and you will see the difference.

@@ -103,6 +103,12 @@ For containers, use a balanced organic granular fertilizer like 4-6-3 at plantin
 
 Typically twice: at planting and when flowering begins. If you use slow-release organic fertilizer, one application at planting may be enough. Over-fertilizing can reduce yields.
 
+
+## Related guides
+
+- [Best way to cook fava beans](/guides/beans-legumes/best-way-to-cook-fava-beans/)
+- [Best way to cook chickpeas](/guides/beans-legumes/best-way-to-cook-chickpeas/)
+
 ## The bottom line
 
 The best fertilizer for pole beans is a low-nitrogen, organic option like 5-10-10 or compost with bone meal. Apply it at planting and again at flowering. Test your soil first, and avoid high-nitrogen fertilizers. With the right feeding, your pole beans will reward you with a heavy harvest of tender pods all summer long.

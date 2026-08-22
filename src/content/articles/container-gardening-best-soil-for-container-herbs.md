@@ -82,3 +82,9 @@ Not always. A mid-priced mix with added perlite and compost works as well as pre
 ## The Bottom Line
 
 The best soil for container herbs is a well-draining mix of potting soil, perlite, and compost. Tailor it to your herbs: richer for moisture-loving basil, leaner for Mediterranean types. Use quality commercial mixes or make your own, and maintain with light feeding and proper watering. With the right soil, your herbs will thrive and flavor your cooking all season long.
+
+
+## Related guides
+
+- [Best soil for container gardening vegetables](/guides/container-gardening/best-soil-for-container-gardening-vegetables/)
+- [Best soil for container gardening](/guides/container-gardening/best-soil-for-container-gardening/)

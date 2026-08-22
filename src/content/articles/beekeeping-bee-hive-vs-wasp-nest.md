@@ -87,6 +87,12 @@ No. Honey bees can sting, but they are defensive, not aggressive. They only stin
 
 Bee removal from a structure: $100 to $300. Wasp nest removal: $50 to $150, depending on location and size. Some beekeepers remove swarms for free.
 
+
+## Related guides
+
+- [Be beekeeping for beginners](/guides/beekeeping/be-beekeeping-for-beginners/)
+- [Beehive for beginners](/guides/beekeeping/beehive-for-beginners/)
+
 ## The bottom line
 
 A bee hive is a valuable asset, a wasp nest is a nuisance. Learn to tell them apart by material, location, and behavior. If you find bees, call a beekeeper to relocate them. If you find wasps, treat the nest at night and remove it. Act early, and you'll keep your garden and homestead safe without harming beneficial pollinators.

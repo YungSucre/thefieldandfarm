@@ -95,3 +95,10 @@ Leeks are much larger and milder, with a thicker white base. Green onions (scall
 The best way to cook leeks is to clean them well, slice them, and sauté them in butter over medium heat until soft and sweet. That's the foundation for countless dishes. Roasting and braising are excellent alternatives when you want a different texture. Master this simple technique, and you'll never waste a leek again.
 
 Whether you're using your homegrown 'American Flag' or store-bought leeks, the process is the same. Take the time to clean properly, cook gently, and season simply. You'll get tender, flavorful leeks every time.
+
+
+## Related guides
+
+- [Best soil for leeks](/guides/alliums/best-soil-for-leeks/)
+- [Best fertilizer for shallots](/guides/alliums/best-fertilizer-for-shallots/)
+- [When to Plant Garlic: Timing and Tips for a Big Harvest](/guides/alliums/when-to-plant-garlic/)

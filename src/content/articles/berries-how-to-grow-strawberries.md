@@ -117,3 +117,10 @@ For June-bearing types, remove runners in the first year to direct energy into r
 ## The Bottom Line
 
 Growing strawberries is straightforward if you choose the right type for your area, prepare the soil well, and stay consistent with watering and weeding. Start with a small patch of 20 to 30 plants, which will give you enough berries for fresh eating and freezing. With proper care, your strawberry bed can produce for 3 to 5 years before needing replacement. Plant this spring, and you'll be harvesting your own sweet berries by early summer.
+
+
+## Related guides
+
+- [Best fertilizer for gooseberries](/guides/berries/best-fertilizer-for-gooseberries/)
+- [Best fertilizer for raspberries](/guides/berries/best-fertilizer-for-raspberries/)
+- [Best soil for gooseberries](/guides/berries/best-soil-for-gooseberries/)

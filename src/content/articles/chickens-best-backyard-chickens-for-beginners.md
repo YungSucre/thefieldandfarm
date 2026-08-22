@@ -103,6 +103,12 @@ No. Hens lay eggs without a rooster. Roosters are only needed if you want fertil
 
 Hens lay best in their first 2 to 3 years, then production declines. They can live 8 to 10 years, but after age 3, you may get only 1 or 2 eggs per week. Many keepers replace older hens with new chicks every few years.
 
+
+## Related guides
+
+- [Backyard Chickens for Beginners: What You Need to Get Started](/guides/chickens/backyard-chickens-for-beginners/)
+- [Best breed of chicken for beginners](/guides/chickens/best-breed-of-chicken-for-beginners/)
+
 ## The bottom line
 
 For a beginner, choose Australorp, Buff Orpington, or Plymouth Rock. They are calm, hardy, and lay well. Set up a safe coop and run, feed a quality layer feed, and keep the water fresh. Expect to spend $500 to $800 to start, and you'll have fresh eggs within 6 months. Start small, learn as you go, and enjoy the process.

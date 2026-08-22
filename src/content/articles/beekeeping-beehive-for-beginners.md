@@ -59,6 +59,12 @@ Wear your veil and gloves, and work slowly. Stings are rare if you use a smoker 
 
 Yes, as long as you have a 5-foot clearance around the hive and a water source. Bees will fly up and over people, so a fence or hedge can direct their flight path.
 
+
+## Related guides
+
+- [Be beekeeping for beginners](/guides/beekeeping/be-beekeeping-for-beginners/)
+- [Bee hive vs wasp nest](/guides/beekeeping/bee-hive-vs-wasp-nest/)
+
 ## The bottom line
 
 Starting a beehive is a manageable project with a clear learning curve. Buy a Langstroth hive, order a nuc in February, set up your apiary in a sunny spot, and inspect regularly. Control mites in August, and you'll have a thriving colony and honey by year two. The cost is about $400 for your first hive, but the reward is fresh honey and a healthier garden.

@@ -70,3 +70,10 @@ Yes, but mix it with potting mix at no more than 30% by volume. Pure compost can
 ## The Bottom Line
 
 The best compost is well-aged, dark, crumbly, and free of contaminants. Buy it from a trusted source if you need it now, but making your own is cheaper and gives you control. Start a simple pile this week with leaves and kitchen scraps, keep it moist and turned, and in three months you'll have black gold. Your soil will thank you, and so will your wallet.
+
+
+## Related guides
+
+- [Best compost bin australia](/guides/composting/best-compost-bin-australia/)
+- [How to Compost at Home: A Beginner's Guide to Composting](/guides/composting/how-to-compost-at-home/)
+- [Backyard composting for beginners](/guides/composting/backyard-composting-for-beginners/)

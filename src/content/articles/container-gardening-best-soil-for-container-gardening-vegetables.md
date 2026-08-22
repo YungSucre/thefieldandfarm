@@ -96,6 +96,12 @@ Not completely. Replace about one-third of the soil annually with fresh compost 
 
 Mix your own: buy a bale of peat moss or coir ($15), a bag of perlite ($8), and compost from your pile (free). This makes several pots for less than $1 per pot, but it takes more effort.
 
+
+## Related guides
+
+- [Best soil for container gardening](/guides/container-gardening/best-soil-for-container-gardening/)
+- [Best soil for container herbs](/guides/container-gardening/best-soil-for-container-herbs/)
+
 ## The bottom line
 
 The best soil for container vegetables is a light, well-draining mix with compost and perlite. Start with the 60-30-10 recipe, adjust for specific crops, and feed regularly. With good soil, your container garden will produce healthy, tasty vegetables all season. Avoid garden soil, keep pots watered, and you will succeed.
