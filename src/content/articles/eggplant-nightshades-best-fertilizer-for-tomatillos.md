@@ -111,4 +111,3 @@ The best fertilizer for tomatillos is a balanced 10-10-10 at planting, followed 
 ## Related guides
 
 - [Best soil for tomatillos](/guides/eggplant-nightshades/best-soil-for-tomatillos/)
-- [Best way to cook tomatillos](/guides/eggplant-nightshades/best-way-to-cook-tomatillos/)

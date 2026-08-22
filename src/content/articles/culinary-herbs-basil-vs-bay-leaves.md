@@ -60,7 +60,6 @@ You can grow both, of course. Basil fills the summer gap, while bay provides yea
 
 ## Related guides
 
-- [Basil vs chia seeds](/guides/culinary-herbs/basil-vs-chia-seeds/)
 - [Basil vs chia](/guides/culinary-herbs/basil-vs-chia/)
 
 ## The bottom line

@@ -109,8 +109,6 @@ Typically twice: at planting and when flowering begins. If you use slow-release 
 
 ## Related guides
 
-- [Best way to cook fava beans](/guides/beans-legumes/best-way-to-cook-fava-beans/)
-- [Best way to cook chickpeas](/guides/beans-legumes/best-way-to-cook-chickpeas/)
 
 ## The bottom line
 

@@ -85,7 +85,6 @@ Absolutely. Add a teaspoon of dried peppermint or lemon balm to your black or gr
 ## Related guides
 
 - [Best herbs for beginners](/guides/herbal-remedies/best-herbs-for-beginners/)
-- [Best tea for beginners](/guides/herbal-remedies/best-tea-for-beginners/)
 
 ## The bottom line
 

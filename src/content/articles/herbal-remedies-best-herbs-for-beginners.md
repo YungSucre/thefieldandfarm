@@ -110,7 +110,6 @@ Most herbs prefer lean soil. A light application of compost or a balanced organi
 ## Related guides
 
 - [Best tasting tea for beginners](/guides/herbal-remedies/best-tasting-tea-for-beginners/)
-- [Best tea for beginners](/guides/herbal-remedies/best-tea-for-beginners/)
 
 ## The bottom line
 Growing herbs is one of the most rewarding parts of gardening. Start with basil, mint, parsley, chives, and oregano, and you'll have fresh flavor for your cooking within weeks. Plant them in containers, give them sun and water, and harvest often. As you gain confidence, you can expand to other herbs like thyme, rosemary, and cilantro. The key is to start small, learn by doing, and enjoy the process.

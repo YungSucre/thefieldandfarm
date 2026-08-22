@@ -100,4 +100,3 @@ The best soil for tomatillos is loose, loamy, rich in organic matter, with a pH 
 ## Related guides
 
 - [Best fertilizer for tomatillos](/guides/eggplant-nightshades/best-fertilizer-for-tomatillos/)
-- [Best way to cook tomatillos](/guides/eggplant-nightshades/best-way-to-cook-tomatillos/)

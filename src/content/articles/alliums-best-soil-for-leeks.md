@@ -100,6 +100,5 @@ The best soil for leeks is loose, fertile, and well-drained, with a pH of 6.0 to
 
 ## Related guides
 
-- [Best way to cook leeks](/guides/alliums/best-way-to-cook-leeks/)
 - [Best fertilizer for shallots](/guides/alliums/best-fertilizer-for-shallots/)
 - [When to Plant Garlic: Timing and Tips for a Big Harvest](/guides/alliums/when-to-plant-garlic/)

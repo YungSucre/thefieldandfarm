@@ -113,4 +113,3 @@ The best compost deals in the UK come from timing your purchases, comparing onli
 ## Related guides
 
 - [Best compost deals this week](/guides/fertilizers/best-compost-deals-this-week/)
-- [Best compost deals](/guides/fertilizers/best-compost-deals/)

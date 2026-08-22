@@ -93,7 +93,6 @@ Early spring (March to May) has the most sales, but late fall (September to Nove
 ## Related guides
 
 - [Best compost deals uk](/guides/fertilizers/best-compost-deals-uk/)
-- [Best compost deals](/guides/fertilizers/best-compost-deals/)
 
 ## The bottom line
 

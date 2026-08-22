@@ -93,4 +93,3 @@ Companion planting is a practical, low-cost way to improve garden health, but it
 ## Related guides
 
 - [Companion planting for beginners](/guides/companion-planting/companion-planting-for-beginners/)
-- [How to do companion gardening for beginners](/guides/companion-planting/how-to-do-companion-gardening-for-beginners/)

@@ -111,7 +111,6 @@ Use a reliable chart from a university extension service, not just any internet 
 
 ## Related guides
 
-- [How to do companion gardening for beginners](/guides/companion-planting/how-to-do-companion-gardening-for-beginners/)
 - [How to plant companion plants](/guides/companion-planting/how-to-plant-companion-plants/)
 
 ## The bottom line

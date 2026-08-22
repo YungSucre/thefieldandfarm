@@ -86,5 +86,4 @@ For healthy shallots, use a balanced fertilizer like 10-10-10 at planting and a 
 ## Related guides
 
 - [Best soil for leeks](/guides/alliums/best-soil-for-leeks/)
-- [Best way to cook leeks](/guides/alliums/best-way-to-cook-leeks/)
 - [When to Plant Garlic: Timing and Tips for a Big Harvest](/guides/alliums/when-to-plant-garlic/)

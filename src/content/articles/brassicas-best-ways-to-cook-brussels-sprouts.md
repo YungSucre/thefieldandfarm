@@ -91,7 +91,6 @@ Fresh Brussels sprouts keep for up to a week in the fridge in a plastic bag. Do 
 
 ## Related guides
 
-- [Best way to cook kohlrabi](/guides/brassicas/best-way-to-cook-kohlrabi/)
 - [Best soil for kohlrabi](/guides/brassicas/best-soil-for-kohlrabi/)
 
 ## The bottom line

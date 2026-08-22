@@ -122,5 +122,4 @@ Basil and chia are both easy to grow, but they serve different purposes. Basil g
 
 ## Related guides
 
-- [Basil vs chia seeds](/guides/culinary-herbs/basil-vs-chia-seeds/)
 - [Basil vs bay leaves](/guides/culinary-herbs/basil-vs-bay-leaves/)

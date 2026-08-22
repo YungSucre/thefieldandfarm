@@ -76,7 +76,6 @@ Yes, but amend heavily with compost and consider raised beds. Clay soil needs or
 
 ## Related guides
 
-- [Best way to cook kohlrabi](/guides/brassicas/best-way-to-cook-kohlrabi/)
 - [Best ways to cook brussels sprouts](/guides/brassicas/best-ways-to-cook-brussels-sprouts/)
 
 ## The bottom line
