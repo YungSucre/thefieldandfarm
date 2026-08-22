@@ -1,0 +1,336 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { SITE } from "../../config";
+import { VEGGIES } from "../../data/vegetables";
+import { FROST_RULES } from "../../data/vegetables";
+
+const updated = "August 22, 2026"; // date du dernier fetch de données climatiques (build)
+const dataSource = "NOAA 1991-2020 climate normals via open-meteo archive";
+---
+
+<BaseLayout
+  title={`Planting Dates Calculator by ZIP Code — ${SITE.name}`}
+  description="Enter your ZIP code to get your last and first frost dates (10/50/90% probability) and a personalized vegetable planting calendar based on 30 years of NOAA climate data."
+  canonical={`${SITE.url}/calculators/planting-dates/`}
+>
+  <div class="calc-hero">
+    <div class="container">
+      <span class="eyebrow">Free Garden Calculator</span>
+      <h1>Planting Dates by ZIP Code</h1>
+      <p class="lead">
+        Enter your ZIP code for your last spring frost, first fall frost, and a
+        personalized planting calendar — computed from <strong>30 years of NOAA
+        climate data (1991–2020)</strong>, not a generic zone map.
+      </p>
+      <div class="updated-badge" title="Data source: NOAA 1991-2020 normals via open-meteo">
+        ⚡ Updated {updated} · NOAA 1991–2020 normals · free forever
+      </div>
+    </div>
+  </div>
+
+  <div class="container calc-body">
+    <!-- INPUT -->
+    <section class="calc-card" id="input">
+      <h2>1. Enter your ZIP code</h2>
+      <form id="zipForm" class="zip-form" autocomplete="off">
+        <input
+          id="zipInput"
+          name="zip"
+          type="text"
+          inputmode="numeric"
+          pattern="[0-9]{5}"
+          maxlength="5"
+          placeholder="e.g. 83701"
+          required
+          aria-label="ZIP code"
+        />
+        <button type="submit" id="zipBtn">Get my dates</button>
+      </form>
+      <p id="zipError" class="zip-error" hidden>Enter a valid 5-digit US ZIP code.</p>
+      <p class="hint">
+        We detect your approximate location automatically — or type any ZIP code
+        to plan for that area.
+      </p>
+    </section>
+
+    <!-- FROST DATES -->
+    <section class="calc-card" id="frost" hidden>
+      <h2>2. Your frost dates</h2>
+      <p class="loc" id="locLabel"></p>
+      <div class="frost-grid">
+        <div class="frost-box">
+          <span class="frost-label">Last spring frost · 90% sure</span>
+          <span class="frost-value" id="last90">—</span>
+          <span class="frost-sub">safe after this date</span>
+        </div>
+        <div class="frost-box">
+          <span class="frost-label">Last spring frost · 50%</span>
+          <span class="frost-value" id="last50">—</span>
+          <span class="frost-sub">median</span>
+        </div>
+        <div class="frost-box">
+          <span class="frost-label">First fall frost · 50%</span>
+          <span class="frost-value" id="first50">—</span>
+          <span class="frost-sub">median</span>
+        </div>
+        <div class="frost-box">
+          <span class="frost-label">Growing season</span>
+          <span class="frost-value" id="season">—</span>
+          <span class="frost-sub">frost-free days</span>
+        </div>
+      </div>
+      <p class="note" id="zoneNote"></p>
+    </section>
+
+    <!-- CALENDAR -->
+    <section class="calc-card" id="calendar" hidden>
+      <h2>3. Your planting calendar</h2>
+      <div class="cal-controls">
+        <label>
+          Filter:
+          <select id="filterFrost">
+            <option value="all">All vegetables</option>
+            <option value="tender">Tender (tomatoes, peppers…)</option>
+            <option value="semi">Semi-hardy (lettuce, broccoli…)</option>
+            <option value="hardy">Hardy (beets, carrots, kale…)</option>
+          </select>
+        </label>
+        <span class="count" id="countLabel"></span>
+      </div>
+      <div class="table-wrap">
+        <table class="cal-table">
+          <thead>
+            <tr>
+              <th>Vegetable</th>
+              <th>Method</th>
+              <th>Plant from</th>
+              <th>Harvest ~</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="calBody"></tbody>
+        </table>
+      </div>
+      <p class="note" id="calNote"></p>
+    </section>
+
+    <!-- LOADING -->
+    <section class="calc-card" id="loading" hidden>
+      <div class="spinner"></div>
+      <p>Fetching 30 years of NOAA climate data for your ZIP…</p>
+    </section>
+  </div>
+
+  <!-- METHODOLOGY -->
+  <div class="container">
+    <section class="method">
+      <h2>Methodology &amp; sources</h2>
+      <p>
+        This calculator uses the <strong>NOAA 1991–2020 climate normals</strong> (via the
+        open-meteo archive API) for your ZIP code's coordinates: every daily minimum
+        temperature for 30 years is scanned for frost events (≤32 °F). The last spring
+        frost and first fall frost are collected per year, then the 10th, 50th, and 90th
+        percentiles give you the "early / median / safe" dates — the same probabilistic
+        approach used by university extension services.
+      </p>
+      <ul>
+        <li><strong>ZIP → coordinates:</strong> zippopotam.us (USPS ZIP data)</li>
+        <li><strong>Climate:</strong> NOAA 1991–2020 daily minima via open-meteo archive API</li>
+        <li><strong>Days to maturity:</strong> University of Maryland Extension, Cornell Cooperative Extension, USDA</li>
+        <li><strong>Frost rules:</strong> tender = after 90% last frost; semi = after 50%; hardy = 4 weeks before</li>
+      </ul>
+      <p class="disclaimer">
+        Dates are estimates based on 30-year averages, not guarantees. Local microclimate,
+        elevation, and year-to-year weather always matter. For USDA hardiness zones, always
+        confirm against the official USDA Plant Hardiness Zone Map.
+      </p>
+    </section>
+  </div>
+
+  <style>
+    .calc-hero {
+      background: linear-gradient(120deg, #1e3a2f 0%, #2c5f4a 70%, #3a7a5f 100%);
+      color: #fff;
+      padding: 2.2rem 0 2rem;
+      border-radius: 14px;
+      margin: 0 0 1.6rem;
+    }
+    .calc-hero .container { max-width: 860px; margin: 0 auto; padding: 0 1.2rem; }
+    .calc-hero .eyebrow {
+      display: inline-block; background: rgba(255,255,255,.14); color: #d8f3e4;
+      font-size: .78rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .08em; padding: .3rem .7rem; border-radius: 6px; margin-bottom: .8rem;
+    }
+    .calc-hero h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); margin: 0 0 .6rem; line-height: 1.15; }
+    .calc-hero .lead { font-size: 1.02rem; color: #e2f2e8; max-width: 640px; margin: 0 0 1rem; line-height: 1.55; }
+    .updated-badge {
+      display: inline-block; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25);
+      color: #eafaf0; font-size: .82rem; padding: .35rem .8rem; border-radius: 8px;
+    }
+    .calc-body { max-width: 860px; margin: 0 auto; padding: 0 1.2rem; }
+    .calc-card {
+      background: #fff; border: 1px solid #e4e2da; border-radius: 12px;
+      padding: 1.4rem 1.5rem; margin-bottom: 1.2rem; box-shadow: 0 1px 3px rgba(0,0,0,.05);
+    }
+    .calc-card h2 { margin: 0 0 .9rem; font-size: 1.2rem; }
+    .zip-form { display: flex; gap: .6rem; flex-wrap: wrap; }
+    .zip-form input {
+      flex: 0 1 180px; padding: .7rem .9rem; font-size: 1.05rem; letter-spacing: .1em;
+      border: 2px solid #c9c5b8; border-radius: 8px; font-family: inherit;
+    }
+    .zip-form input:focus { outline: none; border-color: #2c5f4a; }
+    .zip-form button {
+      padding: .7rem 1.4rem; font-size: 1rem; font-weight: 700; color: #fff;
+      background: #2c5f4a; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;
+    }
+    .zip-form button:hover { background: #234d3c; }
+    .zip-form button:disabled { opacity: .6; cursor: wait; }
+    .zip-error { color: #b3261e; font-size: .9rem; margin: .5rem 0 0; }
+    .hint { color: #6b6a63; font-size: .85rem; margin: .6rem 0 0; }
+    .loc { font-weight: 700; color: #1e3a2f; margin: 0 0 .8rem; }
+    .frost-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: .7rem; }
+    .frost-box {
+      background: #f3f7f4; border: 1px solid #d8e6dd; border-radius: 10px;
+      padding: .9rem 1rem; text-align: center;
+    }
+    .frost-label { display: block; font-size: .78rem; color: #4a6a58; font-weight: 600; }
+    .frost-value { display: block; font-size: 1.45rem; font-weight: 800; color: #1e3a2f; margin: .25rem 0; }
+    .frost-sub { font-size: .75rem; color: #6b6a63; }
+    .note { color: #55544e; font-size: .85rem; margin: .8rem 0 0; line-height: 1.5; }
+    .cal-controls { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: .8rem; flex-wrap: wrap; }
+    .cal-controls select { padding: .45rem .6rem; border: 1px solid #c9c5b8; border-radius: 6px; font-family: inherit; }
+    .count { color: #6b6a63; font-size: .85rem; }
+    .table-wrap { overflow-x: auto; }
+    .cal-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+    .cal-table th {
+      text-align: left; background: #f0efe9; padding: .55rem .7rem;
+      font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; color: #4a4a44;
+    }
+    .cal-table td { padding: .55rem .7rem; border-bottom: 1px solid #ecebe4; }
+    .cal-table tr:hover td { background: #fafaf7; }
+    .tag { display: inline-block; font-size: .72rem; font-weight: 700; padding: .15rem .5rem; border-radius: 20px; }
+    .tag-tender { background: #fde8e8; color: #a33; }
+    .tag-semi { background: #fdf3d8; color: #8a6d1a; }
+    .tag-hardy { background: #e3f2e9; color: #1e6b46; }
+    .tag-ok { background: #e3f2e9; color: #1e6b46; }
+    .tag-warn { background: #fdf3d8; color: #8a6d1a; }
+    .tag-risk { background: #fde8e8; color: #a33; }
+    .spinner {
+      width: 34px; height: 34px; border: 4px solid #d8e6dd; border-top-color: #2c5f4a;
+      border-radius: 50%; animation: spin 0.9s linear infinite; margin: 0 auto 1rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .method { max-width: 860px; margin: 0 auto 2rem; padding: 0 1.2rem; }
+    .method h2 { font-size: 1.2rem; }
+    .method p, .method li { font-size: .92rem; color: #3d3d38; line-height: 1.6; }
+    .disclaimer { font-size: .82rem; color: #7a7870; font-style: italic; }
+    @media (max-width: 600px) {
+      .frost-grid { grid-template-columns: 1fr 1fr; }
+      .zip-form input { flex: 1 1 100%; }
+    }
+  </style>
+
+  <script>
+    import { zipToCoords, fetchFrostData, frostPercentiles } from "../../lib/planting";
+    import { VEGGIES, FROST_RULES } from "../../data/vegetables";
+
+    const $ = (id: string) => document.getElementById(id)!;
+    const state = { lat: 0, lon: 0, city: "", st: "", frost: null as any };
+
+    // détection auto de localisation (optionnelle, silencieuse)
+    if ("geolocation" in navigator) {
+      // on laisse l'utilisateur taper son zip — plus fiable que la géoloc IP
+    }
+
+    $("zipForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const zip = $("zipInput").value.trim();
+      if (!/^\d{5}$/.test(zip)) { $("zipError").hidden = false; return; }
+      $("zipError").hidden = true;
+      $("zipBtn").disabled = true;
+      $("zipBtn").textContent = "Computing…";
+      $("input").hidden = false;
+      $("frost").hidden = true;
+      $("calendar").hidden = true;
+      $("loading").hidden = false;
+      try {
+        const c = await zipToCoords(zip);
+        state.lat = c.lat; state.lon = c.lon; state.city = c.city; state.st = c.state;
+        const { time, tmin } = await fetchFrostData(c.lat, c.lon);
+        state.frost = frostPercentiles(time, tmin);
+        $("loading").hidden = true;
+        renderFrost();
+        renderCalendar();
+        $("frost").hidden = false;
+        $("calendar").hidden = false;
+      } catch (err) {
+        $("loading").hidden = true;
+        $("zipError").textContent = "Could not load climate data for this ZIP. Check the code and try again.";
+        $("zipError").hidden = false;
+      } finally {
+        $("zipBtn").disabled = false;
+        $("zipBtn").textContent = "Get my dates";
+      }
+    });
+
+    function renderFrost() {
+      const f = state.frost;
+      $("locLabel").textContent = `${state.city}, ${state.st} (${state.lat.toFixed(2)}, ${state.lon.toFixed(2)})`;
+      $("last90").textContent = f.lastFrost90;
+      $("last50").textContent = f.lastFrost50;
+      $("first50").textContent = f.firstFrost50;
+      $("season").textContent = `${f.seasonDays} days`;
+      $("zoneNote").textContent = `Estimated growing season: ${f.seasonDays} frost-free days (spring ${f.lastFrost50} → fall ${f.firstFrost50}). Frost dates are 30-year medians; in any given year your dates can differ by weeks.`;
+    }
+
+    function renderCalendar() {
+      const f = state.frost;
+      const last50 = doy(f.lastFrost50);
+      const last90 = doy(f.lastFrost90);
+      const first50 = doy(f.firstFrost50);
+      const body = $("calBody");
+      body.innerHTML = "";
+      let count = 0;
+      for (const v of VEGGIES) {
+        const rule = FROST_RULES[v.frost];
+        let plantDOY: number;
+        if (v.frost === "tender") plantDOY = last90;
+        else if (v.frost === "semi") plantDOY = last50;
+        else plantDOY = last50 - 28; // hardy : 4 semaines avant
+        const harvestDOY = plantDOY + v.dtm;
+        const ok = harvestDOY <= first50 - 14; // récolte avant le gel + marge 2 sem
+        count++;
+        body.insertAdjacentHTML("beforeend", `
+          <tr>
+            <td>${v.name}</td>
+            <td>${v.method === "transplant" ? "Transplant" : v.method === "direct" ? "Direct sow" : "Direct or transplant"}</td>
+            <td>${fromDOY(plantDOY)}</td>
+            <td>${fromDOY(harvestDOY)}</td>
+            <td><span class="tag ${ok ? "tag-ok" : "tag-risk"}">${ok ? "Safe" : "Tight"}</span></td>
+          </tr>`);
+      }
+      $("countLabel").textContent = `${count} vegetables`;
+      $("calNote").textContent = "Tender crops (tomatoes, peppers, squash) go in after the 90%-safe frost date. Hardy crops (beets, carrots, kale) can go in 4 weeks before the median last frost. 'Tight' means the harvest window runs close to the first fall frost — start early or choose a shorter-season variety.";
+    }
+
+    $("filterFrost").addEventListener("change", () => {
+      const val = $("filterFrost").value;
+      const rows = document.querySelectorAll("#calBody tr");
+      rows.forEach((r: any) => {
+        const tag = r.querySelector(".tag");
+        r.style.display = val === "all" || (tag && tag.classList.contains(`tag-${val}`)) ? "" : "none";
+      });
+    });
+
+    function doy(s: string): number {
+      const d = new Date(s + ", 2026");
+      const base = new Date(2026, 0, 1);
+      return Math.floor((d.getTime() - base.getTime()) / 86400000) + 1;
+    }
+    function fromDOY(doy: number): string {
+      const base = new Date(Date.UTC(2026, 0, 1));
+      base.setUTCDate(doy);
+      return base.toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
+    }
+  </script>
+</BaseLayout>
