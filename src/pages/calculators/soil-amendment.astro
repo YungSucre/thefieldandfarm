@@ -1,0 +1,250 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { SITE } from "../../config";
+import { AMENDMENTS, SOIL_TYPES, AMENDMENT_SOURCE, AMENDMENT_UPDATED } from "../../data/amendments";
+
+const updated = "August 22, 2026";
+---
+
+<BaseLayout
+  title="Soil Amendment Calculator (2026) — Compost, Lime &amp; Fertilizer per Bed Size"
+  description="How much compost, lime, sulfur, or fertilizer for your garden beds: enter bed size and soil type, get pounds or cubic feet per amendment from university extension rates."
+  canonical={`${SITE.url}/calculators/soil-amendment/`}
+>
+  <div class="calc-hero">
+    <div class="container">
+      <span class="eyebrow">Free Garden Calculator</span>
+      <h1>Soil Amendment Calculator</h1>
+      <p class="lead">
+        Stop guessing how much compost or lime to add. Enter your <strong>bed size and
+        soil type</strong> — get the right amount of any amendment in pounds or cubic
+        feet, from university extension rates.
+      </p>
+      <div class="updated-badge" title="Rates: UMass, OSU, Clemson extension recommendations">
+        ⚡ Updated {updated} · {AMENDMENT_UPDATED} · free forever
+      </div>
+    </div>
+  </div>
+
+  <div class="container calc-body">
+    <section class="calc-card">
+      <h2>Your bed</h2>
+      <div class="form-grid">
+        <label>
+          Bed length (feet)
+          <input id="length" type="number" inputmode="decimal" min="1" step="0.5" value="8" />
+        </label>
+        <label>
+          Bed width (feet)
+          <input id="width" type="number" inputmode="decimal" min="1" step="0.5" value="4" />
+        </label>
+        <label>
+          Soil type
+          <select id="soil">
+            {Object.entries(SOIL_TYPES).map(([k, v]) => (
+              <option value={k}>{v}</option>
+            ))}
+          </select>
+        </label>
+      </div>
+      <p class="hint" id="areaNote">Bed area: 32 sq ft</p>
+    </section>
+
+    <section class="calc-card">
+      <h2>Amendment amounts</h2>
+      <div class="table-wrap">
+        <table class="calc-table">
+          <thead>
+            <tr><th>Amendment</th><th>Amount for this bed</th><th>Notes</th></tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+      <p class="note" id="tableNote"></p>
+    </section>
+  </div>
+
+  <!-- CONTENU ÉDITORIAL (SEO) -->
+  <div class="container">
+    <section class="editorial">
+      <h2>Why amendment amounts matter</h2>
+      <p>
+        Too little compost and your soil does not improve. Too much lime and you push
+        the pH past the sweet spot, locking up nutrients your plants need. The right
+        approach is to <strong>work from a soil test</strong>, then apply amendments at
+        the recommended rate for your soil type. This calculator applies the standard
+        university extension rates so you know exactly how much to buy and spread.
+      </p>
+      <p>
+        Sandy soils need less lime to change pH (they buffer less); clay soils need
+        more. That is why the same bed in two different soil types can need very
+        different amounts — the calculator adjusts automatically.
+      </p>
+
+      <h2>Reading your results</h2>
+      <ul>
+        <li>
+          <strong>Compost and manure</strong> are measured in cubic feet — a 1-inch
+          layer over your bed. A standard 4×8 bed (32 sq ft) needs about 2.7 cubic feet
+          for a 1-inch topdressing.
+        </li>
+        <li>
+          <strong>Lime</strong> raises pH by about one full point at the listed rate.
+          If your soil test says "from 5.5 to 6.5," apply one full dose. Test again
+          next season rather than guessing more.
+        </li>
+        <li>
+          <strong>Sulfur</strong> lowers pH at the listed rate. It works slowly —
+          apply in fall so it has winter to react.
+        </li>
+        <li>
+          <strong>Blood meal, bone meal, greensand</strong> are for targeted nutrient
+          boosts. Always mix them into the top few inches and water well.
+        </li>
+      </ul>
+
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        <details>
+          <summary>How often should I add compost?</summary>
+          <p>
+            Once a year, in spring or fall, at 1-2 inches over the bed is the standard
+            recommendation for vegetable gardens. New or very poor soil benefits from
+            2 inches the first year; established beds do fine with 1 inch.
+          </p>
+        </details>
+        <details>
+          <summary>Should I test my soil before adding lime or sulfur?</summary>
+          <p>
+            Yes — always. Lime and sulfur change pH, and the wrong direction makes
+            things worse. A basic soil test ($15-25 through your state extension
+            service) tells you your pH, phosphorus, and potassium so you amend for
+            what your soil actually needs.
+          </p>
+        </details>
+        <details>
+          <summary>Can I add too much compost?</summary>
+          <p>
+            Yes. More than 3 inches a year can build up excess phosphorus and tie up
+            nitrogen. Stick to the 1-2 inch annual rate and let the worms do the work.
+          </p>
+        </details>
+        <details>
+          <summary>What pH do vegetables prefer?</summary>
+          <p>
+            Most vegetables grow well between 6.0 and 7.0. Below 6.0, phosphorus and
+            calcium availability drop; above 7.5, iron and manganese become less
+            available, which shows as yellowing leaves.
+          </p>
+        </details>
+        <details>
+          <summary>Do I need all these amendments?</summary>
+          <p>
+            No. Compost is the foundation most gardens need. Lime or sulfur only if a
+            soil test calls for it. Blood meal, bone meal, and greensand are
+            situational — use them when a test shows a specific deficiency or when
+            starting heavy-feeding crops.
+          </p>
+        </details>
+      </div>
+    </section>
+  </div>
+
+  <!-- METHODOLOGY -->
+  <div class="container">
+    <section class="method">
+      <h2>Methodology &amp; sources</h2>
+      <p>
+        Rates from {AMENDMENT_SOURCE}. Lime and sulfur rates are for a one-point pH
+        change on typical garden soil; soil-type factors (sandy 0.6-0.33, clay
+        1.5-1.33) follow standard extension buffering tables. Compost and manure are
+        calculated as a 1-inch layer (8.3 cubic feet per 100 sq ft).
+      </p>
+      <p class="disclaimer">
+        These are general garden rates. For crops with specific needs, follow your
+        soil test report and local extension recommendations.
+      </p>
+    </section>
+  </div>
+
+  <style>
+    .calc-hero { background: linear-gradient(120deg, #1e3a2f 0%, #2c5f4a 70%, #3a7a5f 100%); color: #fff; padding: 2.2rem 0 2rem; border-radius: 14px; margin: 0 0 1.6rem; }
+    .calc-hero .container { max-width: 900px; margin: 0 auto; padding: 0 1.2rem; }
+    .calc-hero .eyebrow { display: inline-block; background: rgba(255,255,255,.14); color: #d8f3e4; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding: .3rem .7rem; border-radius: 6px; margin-bottom: .8rem; }
+    .calc-hero h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); margin: 0 0 .6rem; line-height: 1.15; }
+    .calc-hero .lead { font-size: 1.02rem; color: #e2f2e8; max-width: 680px; margin: 0 0 1rem; line-height: 1.55; }
+    .updated-badge { display: inline-block; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); color: #eafaf0; font-size: .82rem; padding: .35rem .8rem; border-radius: 8px; }
+    .calc-body { max-width: 900px; margin: 0 auto; padding: 0 1.2rem; }
+    .calc-card { background: #fff; border: 1px solid #e4e2da; border-radius: 12px; padding: 1.4rem 1.5rem; margin-bottom: 1.2rem; box-shadow: 0 1px 3px rgba(0,0,0,.05); }
+    .calc-card h2 { margin: 0 0 .9rem; font-size: 1.2rem; }
+    .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .9rem; }
+    .form-grid label { font-size: .85rem; font-weight: 600; color: #333; }
+    .form-grid input, .form-grid select { display: block; width: 100%; margin-top: .3rem; padding: .6rem .8rem; font-size: .95rem; border: 2px solid #c9d2dc; border-radius: 8px; font-family: inherit; background: #fff; }
+    .form-grid input:focus, .form-grid select:focus { outline: none; border-color: #2c5f4a; }
+    .hint { color: #6b6a63; font-size: .85rem; margin: .6rem 0 0; }
+    .table-wrap { overflow-x: auto; }
+    .calc-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+    .calc-table th { text-align: left; background: #f0efe9; padding: .55rem .7rem; font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; color: #4a4a44; }
+    .calc-table td { padding: .5rem .7rem; border-bottom: 1px solid #ecebe4; }
+    .note { color: #55544e; font-size: .85rem; margin: .8rem 0 0; line-height: 1.5; }
+    .editorial { max-width: 900px; margin: 0 auto 2rem; padding: 0 1.2rem; }
+    .editorial h2 { font-size: 1.25rem; margin: 2rem 0 .7rem; }
+    .editorial p, .editorial li { font-size: .95rem; color: #3d3d38; line-height: 1.65; }
+    .editorial ul { padding-left: 1.3rem; }
+    .faq details { border: 1px solid #e4e2da; border-radius: 10px; padding: .8rem 1rem; margin-bottom: .6rem; background: #fff; }
+    .faq summary { font-weight: 700; cursor: pointer; color: #1e3a2f; font-size: .95rem; }
+    .faq details p { margin: .6rem 0 0; font-size: .9rem; color: #55544e; line-height: 1.6; }
+    .method { max-width: 900px; margin: 0 auto 2rem; padding: 0 1.2rem; }
+    .method p { font-size: .92rem; color: #3d3d38; line-height: 1.6; }
+    .disclaimer { font-size: .82rem; color: #7a7870; font-style: italic; }
+  </style>
+
+  <script>
+    import { AMENDMENTS, RATES } from "../../data/amendments";
+    const $ = (id: string) => document.getElementById(id)!;
+
+    function render() {
+      const len = parseFloat($("length").value) || 0;
+      const wid = parseFloat($("width").value) || 0;
+      const soil = $("soil").value as "sandy" | "loam" | "clay";
+      const area = len * wid;
+      $("areaNote").textContent = `Bed area: ${area.toFixed(1)} sq ft`;
+      const body = $("tableBody");
+      body.innerHTML = "";
+      if (!area) return;
+      for (const a of AMENDMENTS) {
+        const rule = RATES[a.id];
+        // lb par 100 sq ft → pour la surface, ajusté au type de sol
+        const per100 = rule.base * rule.soilFactor[soil];
+        const amount = per100 * (area / 100);
+        const display = rule.isVolume
+          ? `${amount.toFixed(1)} cu ft`
+          : `${amount.toFixed(1)} lb`;
+        body.insertAdjacentHTML("beforeend", `
+          <tr>
+            <td>${a.name}</td>
+            <td><strong>${display}</strong></td>
+            <td><small style="color:#8a887e">${a.desc}</small></td>
+          </tr>`);
+      }
+      $("tableNote").textContent = `Rates for ${soil === "sandy" ? "sandy" : soil === "loam" ? "loamy" : "clay"} soil. Compost/manure = 1-inch layer. Lime/sulfur = one-point pH change.`;
+    }
+
+    ["length", "width"].forEach((id) => $(id).addEventListener("input", render));
+    $("soil").addEventListener("change", render);
+    render();
+  </script>
+
+  <!-- JSON-LD FAQPage -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How often should I add compost?", "acceptedAnswer": { "@type": "Answer", "text": "Once a year, in spring or fall, at 1-2 inches over the bed is the standard recommendation for vegetable gardens. New or very poor soil benefits from 2 inches the first year; established beds do fine with 1 inch." } },
+      { "@type": "Question", "name": "Should I test my soil before adding lime or sulfur?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — always. Lime and sulfur change pH, and the wrong direction makes things worse. A basic soil test ($15-25 through your state extension service) tells you your pH, phosphorus, and potassium." } },
+      { "@type": "Question", "name": "Can I add too much compost?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. More than 3 inches a year can build up excess phosphorus and tie up nitrogen. Stick to the 1-2 inch annual rate." } },
+      { "@type": "Question", "name": "What pH do vegetables prefer?", "acceptedAnswer": { "@type": "Answer", "text": "Most vegetables grow well between 6.0 and 7.0. Below 6.0, phosphorus and calcium availability drop; above 7.5, iron and manganese become less available." } },
+      { "@type": "Question", "name": "Do I need all these amendments?", "acceptedAnswer": { "@type": "Answer", "text": "No. Compost is the foundation most gardens need. Lime or sulfur only if a soil test calls for it. Blood meal, bone meal, and greensand are situational." } }
+    ]
+  })} />
+</BaseLayout>
