@@ -4,7 +4,7 @@ description: "Learn the best ways to cook tomatillos: roasting, boiling, or raw.
 vertical: "eggplant-nightshades"
 verticalName: "Eggplant & Nightshades"
 slug: "best-way-to-cook-tomatillos"
-status: "published"
+status: "draft"
 pubDate: 2026-08-22
 affiliate_ready: false
 hero_image: "/images/articles/best-way-to-cook-tomatillos/hero.jpg"

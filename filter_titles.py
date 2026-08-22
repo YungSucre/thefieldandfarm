@@ -34,7 +34,7 @@ NOISE = [
     "for sale", "amazon echo", "soundbar", "headphones", "iphone", "android",
     "laptop", "macbook", "ps5", "xbox", "instagram", "tiktok", "youtube",
     "google", "facebook", "certification", "degree", "how to become",
-    "how to make money", "beats ", " beats", "airpods", "speaker", "tv ",
+    "how to make money", "way to cook", "recipes", "recipe", "cooking", "cook ", "beats ", " beats", "airpods", "speaker", "tv ",
     "monitor", "printer", "router", "wifi", "lifespan of a", "car ", "truck ",
     "motorcycle", "bicycle", "fishing", "hunting", "gun", "knife", "dog ",
     "cat ", "guitar", "piano", "workout", "gym", "meditation app", "dating",

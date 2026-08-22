@@ -4,7 +4,7 @@ description: "Learn the best way to cook leeks: clean, slice, and sauté or roas
 vertical: "alliums"
 verticalName: "Onions, Garlic & Alliums"
 slug: "best-way-to-cook-leeks"
-status: "published"
+status: "draft"
 pubDate: 2026-08-22
 affiliate_ready: false
 hero_image: "/images/articles/best-way-to-cook-leeks/hero.jpg"

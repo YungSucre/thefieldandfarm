@@ -4,7 +4,7 @@ description: "Learn the best way to cook kohlrabi: roasting, sautéing, or eatin
 vertical: "brassicas"
 verticalName: "Brassicas"
 slug: "best-way-to-cook-kohlrabi"
-status: "published"
+status: "draft"
 pubDate: 2026-08-22
 affiliate_ready: false
 hero_image: "/images/articles/best-way-to-cook-kohlrabi/hero.jpg"

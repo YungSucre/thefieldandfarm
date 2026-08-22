@@ -4,7 +4,7 @@ description: "Learn the best way to cook chickpeas from dried or fresh, with soa
 vertical: "beans-legumes"
 verticalName: "Beans & Legumes"
 slug: "best-way-to-cook-chickpeas"
-status: "published"
+status: "draft"
 pubDate: 2026-08-22
 affiliate_ready: false
 hero_image: "/images/articles/best-way-to-cook-chickpeas/hero.jpg"
