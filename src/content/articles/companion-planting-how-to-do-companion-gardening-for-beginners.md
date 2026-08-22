@@ -4,7 +4,7 @@ description: "Learn companion planting basics: which crops help each other, whic
 vertical: "companion-planting"
 verticalName: "Companion Planting"
 slug: "how-to-do-companion-gardening-for-beginners"
-status: "published"
+status: "draft"
 pubDate: 2026-08-22
 affiliate_ready: false
 hero_image: "/images/articles/how-to-do-companion-gardening-for-beginners/hero.jpg"

@@ -4,7 +4,7 @@ description: "Compare basil and chia seeds for your garden: growing needs, yield
 vertical: "culinary-herbs"
 verticalName: "Culinary Herbs"
 slug: "basil-vs-chia-seeds"
-status: "published"
+status: "draft"
 pubDate: 2026-08-22
 affiliate_ready: false
 hero_image: "/images/articles/basil-vs-chia-seeds/hero.jpg"

@@ -4,7 +4,7 @@ description: "Discover the easiest tea plants for beginners, with planting tips,
 vertical: "herbal-remedies"
 verticalName: "Herbal Remedies & Tinctures"
 slug: "best-tea-for-beginners"
-status: "published"
+status: "draft"
 pubDate: 2026-08-22
 affiliate_ready: false
 hero_image: "/images/articles/best-tea-for-beginners/hero.jpg"

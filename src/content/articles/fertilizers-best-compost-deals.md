@@ -4,7 +4,7 @@ description: "Find the best compost deals in 2026: compare bagged, bulk, and DIY
 vertical: "fertilizers"
 verticalName: "Fertilizers & Plant Feeding"
 slug: "best-compost-deals"
-status: "published"
+status: "draft"
 pubDate: 2026-08-22
 affiliate_ready: false
 hero_image: "/images/articles/best-compost-deals/hero.jpg"
