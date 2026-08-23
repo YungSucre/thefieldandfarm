@@ -8,7 +8,7 @@ export const GET: APIRoute = () => {
   lines.push("");
   lines.push(`> ${SITE.description}`);
   lines.push("");
-  lines.push("The Field &amp; Farm is an independent publisher of practical business guides for practice owners: taxes, accounting, software, hiring, and compliance, organized by practice type.");
+  lines.push("The Field & Farm is an independent publisher of practical business guides for practice owners: taxes, accounting, software, hiring, and compliance, organized by practice type.");
   lines.push("");
   lines.push("## Guide hubs (verticals)");
   lines.push("");
